@@ -123,6 +123,47 @@ Programmet over produserer grafen under:
 
 \newpage
 
+e)
+
+\begin{equation}
+    \begin{split}
+        p(t, \theta) = \left(a \cdot arcsinh\left(\frac{t}{a}\right), \sqrt{t^2 + a^2} \cdot cos\theta, \sqrt{t^2 + a^2} \cdot sin\theta \right)
+    \end{split}
+\end{equation}
+
+\begin{equation}
+    \begin{split}
+        p_t(t, \theta) &= \frac{\partial p}{\partial t} p(t, \theta) \\
+                       &= \left(\frac{1}{\sqrt{t^2 + a^2}}, \frac{t}{\sqrt{t^2 + a^2}} \cdot cos\theta, \frac{t}{\sqrt{t^2 + a^2}} \cdot sin\theta \right)
+    \end{split}
+\end{equation}
+
+\begin{equation}
+    \begin{split}
+        p_\theta(t,\theta) &= \frac{\partial p}{\partial \theta} p(t, \theta) \\
+                           &= \left(0, -\sqrt{t^2 + a^2} \cdot sin\theta, \sqrt{t^2 + a^2} \cdot cos\theta   \right)
+    \end{split}
+\end{equation}
+
+\begin{equation}
+    \begin{split}
+        p_t \times p_\theta &= \left(t \cdot cos^2\theta + t \cdot sin^2\theta, a \cdot cos\theta, -a \cdot sin\theta    \right) \\
+                            &= \left(t, a \cdot cos\theta, -a \cdot sin\theta  \right)
+    \end{split}
+\end{equation}
+
+\begin{equation}
+    \begin{split}
+        ||p_t \times p_\theta|| &= \sqrt{t^2 + (a \cdot cos\theta)^2 + (-a \cdot sin\theta)^2} \\
+                                &= \sqrt{t^2 + a^2 \cdot cos^2\theta + a^2 \cdot sin^2\theta} \\
+                                &= \sqrt{t^2 + a^2}
+    \end{split}
+\end{equation}
+
+
+
+\newpage
+
 \section*{Oppgave 2}
 
 a) For at to vektorfelt skal stå normalt på hverandre, så må prikkproduktet av dem være lik 0. 
@@ -147,7 +188,7 @@ b) For at $\textbf{F}^\perp$ skal være et konservativt felt, så må $\frac{\pa
     \end{split}
 \end{equation}
 
-For at $\textbf{F}^\perp$ skal være konservativt, så må $\underline{\underline{d = -a}}$
+For at $\textbf{F}^\perp$ skal være konservativt, så må $\underline{\underline{d = -a}}$ \\
 
 c) Vi har likningen $\phi(\textbf{r}(t)) = K$ der $\textbf{r}(t)$ er en kurve på nivåkurven K, og $\textbf{r}'(t)$ tangerer på ethvert punkt på
 $\textbf{r}(t)$. Vi kan dermed bruke kjerneregelen på $\phi(\textbf{r}(t)) = K$, og man får:
@@ -160,6 +201,8 @@ $\textbf{r}(t)$. Vi kan dermed bruke kjerneregelen på $\phi(\textbf{r}(t)) = K$
 \end{equation}
 
 Siden $\textbf{r}'(t)$ tangerer nivåkurven overalt, og prikkproduktet er lik $0$, så må $\nabla\phi(\textbf{r}(t))$ være normal på nivåkurven.
+
+\newpage
 
 d) Hvis $\nabla\phi(x,y) = k \cdot \textbf{F}^\perp(x,y)$, så betyr det at de er parallelle, og siden $\textbf{F}(x,y)$ står normalt på $\textbf{F}^\perp(x,y)$,
 så vil $\textbf{F}$ også være normal på $\nabla\phi(x,y)$, som betyr at $\textbf{F}(x,y)$ vil være parallell med nivåkurvene.
@@ -179,7 +222,7 @@ så vil $\textbf{F}$ også være normal på $\nabla\phi(x,y)$, som betyr at $\te
     \end{split}
 \end{equation}
 
-siden vi har vist at $\nabla\phi(x,y) || \textbf{F}^\perp(x,y)$, så vil $\textbf{F}$ være parallell med nivåkurvene. 
+siden vi har vist at $\nabla\phi(x,y) || \textbf{F}^\perp(x,y)$, så vil $\textbf{F}$ være parallell med nivåkurvene. \\
 
 e) For å avgjøre hva for slags nivåkurver vi får ved ulike verdier av a, b, og c, så må vi ta determinanten av den kvadratiske matrisen 
 $

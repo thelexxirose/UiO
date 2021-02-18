@@ -1,4 +1,4 @@
-This is pdfTeX, Version 3.14159265-2.6-1.40.20 (TeX Live 2019/Debian) (preloaded format=pdflatex 2021.2.12)  17 FEB 2021 10:22
+This is pdfTeX, Version 3.14159265-2.6-1.40.20 (TeX Live 2019/Debian) (preloaded format=pdflatex 2021.2.12)  18 FEB 2021 09:51
 entering extended mode
  restricted \write18 enabled.
  file:line:error style messages enabled.
@@ -259,36 +259,46 @@ File: ../images/1d.png Graphic file (type png)
 <use ../images/1d.png>
 Package pdftex.def Info: ../images/1d.png  used on input line 122.
 (pdftex.def)             Requested size: 370.02289pt x 277.51717pt.
- [4 <../images/1d.png>] [5] [6] (/home/cory/Documents/UiO/MAT1110/Oblig1/Latex/../Python/2f.py)
-<../images/ellipse.png, id=43, 462.528pt x 346.896pt>
+ [4 <../images/1d.png>] [5]
+Underfull \hbox (badness 10000) in paragraph at lines 191--192
+
+ []
+
+[6]
+Underfull \hbox (badness 10000) in paragraph at lines 225--226
+
+ []
+
+[7] (/home/cory/Documents/UiO/MAT1110/Oblig1/Latex/../Python/2f.py)
+<../images/ellipse.png, id=47, 462.528pt x 346.896pt>
 File: ../images/ellipse.png Graphic file (type png)
 <use ../images/ellipse.png>
-Package pdftex.def Info: ../images/ellipse.png  used on input line 209.
+Package pdftex.def Info: ../images/ellipse.png  used on input line 252.
 (pdftex.def)             Requested size: 231.26343pt x 173.44757pt.
-<../images/hyperbolic.png, id=44, 462.528pt x 346.896pt>
+<../images/hyperbolic.png, id=48, 462.528pt x 346.896pt>
 File: ../images/hyperbolic.png Graphic file (type png)
 <use ../images/hyperbolic.png>
-Package pdftex.def Info: ../images/hyperbolic.png  used on input line 210.
+Package pdftex.def Info: ../images/hyperbolic.png  used on input line 253.
 (pdftex.def)             Requested size: 231.26343pt x 173.44757pt.
 
-Overfull \hbox (75.13734pt too wide) in paragraph at lines 208--211
+Overfull \hbox (75.13734pt too wide) in paragraph at lines 251--254
 [] [] 
  []
 
-[7 <../images/ellipse.png> <../images/hyperbolic.png>] (/home/cory/Documents/UiO/MAT1110/Oblig1/Latex/oblig1.aux) ) 
+[8 <../images/ellipse.png> <../images/hyperbolic.png>] (/home/cory/Documents/UiO/MAT1110/Oblig1/Latex/oblig1.aux) ) 
 Here is how much of TeX's memory you used:
- 5468 strings out of 483107
- 75243 string characters out of 5964630
- 578294 words of memory out of 5000000
- 20409 multiletter control sequences out of 15000+600000
+ 5472 strings out of 483107
+ 75284 string characters out of 5964630
+ 601294 words of memory out of 5000000
+ 20413 multiletter control sequences out of 15000+600000
  546213 words of font info for 54 fonts, out of 8000000 for 9000
  59 hyphenation exceptions out of 8191
  37i,21n,42p,304b,1374s stack positions out of 5000i,500n,10000p,200000b,80000s
  </home/cory/.texlive2019/texmf-var/fonts/pk/ljfour/jknappen/ec/ecbx0800.600pk> </home/cory/.texlive2019/texmf-var/fonts/pk/ljfour/jknappen/ec/ectt1000.600pk> </home/cory/.texlive2019/texmf-var/fonts/pk/ljfour/jknappen/ec/ecrm0600.600pk> </home/cory/.texlive2019/texmf-var/fonts/pk/ljfour/jknappen/ec/ecbx1200.600pk> </home/cory/.texlive2019/texmf-var/fonts/pk/ljfour/jknappen/ec/ecbx1728.600pk> </home/cory/.texlive2019/texmf-var/fonts/pk/ljfour/jknappen/ec/ecrm1200.600pk> </home/cory/.texlive2019/texmf-var/fonts/pk/ljfour/jknappen/ec/ecrm1440.600pk> </home/cory/.texlive2019/texmf-var/fonts/pk/ljfour/jknappen/ec/ecrm2074.600pk></usr/share/texlive/texmf-dist/fonts/type1/public/amsfonts/cm/cmex10.pfb></usr/share/texlive/texmf-dist/fonts/type1/public/amsfonts/cmextra/cmex8.pfb></usr/share/texlive/texmf-dist/fonts/type1/public/amsfonts/cm/cmmi12.pfb></usr/share/texlive/texmf-dist/fonts/type1/public/amsfonts/cm/cmmi6.pfb></usr/share/texlive/texmf-dist/fonts/type1/public/amsfonts/cm/cmmi8.pfb></usr/share/texlive/texmf-dist/fonts/type1/public/amsfonts/cm/cmr12.pfb></usr/share/texlive/texmf-dist/fonts/type1/public/amsfonts/cm/cmr6.pfb></usr/share/texlive/texmf-dist/fonts/type1/public/amsfonts/cm/cmr8.pfb></usr/share/texlive/texmf-dist/fonts/type1/public/amsfonts/cm/cmsy10.pfb></usr/share/texlive/texmf-dist/fonts/type1/public/amsfonts/cm/cmsy6.pfb></usr/share/texlive/texmf-dist/fonts/type1/public/amsfonts/cm/cmsy8.pfb>
-Output written on /home/cory/Documents/UiO/MAT1110/Oblig1/Latex/oblig1.pdf (7 pages, 418144 bytes).
+Output written on /home/cory/Documents/UiO/MAT1110/Oblig1/Latex/oblig1.pdf (8 pages, 492811 bytes).
 PDF statistics:
- 271 PDF objects out of 1000 (max. 8388607)
- 84 compressed objects within 1 object stream
+ 280 PDF objects out of 1000 (max. 8388607)
+ 86 compressed objects within 1 object stream
  0 named destinations out of 1000 (max. 500000)
  16 words of extra memory for PDF output out of 10000 (max. 10000000)
 
