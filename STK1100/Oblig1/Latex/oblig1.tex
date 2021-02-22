@@ -1,0 +1,259 @@
+\documentclass[12pt, a4paper]{article}
+\usepackage[utf8]{inputenc}
+\usepackage{mathtools}
+\usepackage{amsthm}
+\usepackage{cancel}
+%\usepackage{graphicx}
+%\graphicspath{ {../images/} }
+
+\usepackage{listings}
+\usepackage{xcolor}
+
+\usepackage[T1]{fontenc}
+
+\definecolor{codegreen}{rgb}{0,0.6,0}
+\definecolor{codegray}{rgb}{0.5,0.5,0.5}
+\definecolor{codepurple}{rgb}{0.58,0,0.82}
+\definecolor{backcolour}{rgb}{0.95,0.95,0.92}
+
+\lstdefinestyle{mystyle}{
+    backgroundcolor=\color{backcolour},   
+    commentstyle=\color{codegreen},
+    keywordstyle=\color{blue},
+    numberstyle=\tiny\color{codegray},
+    stringstyle=\color{codegreen},
+    basicstyle=\ttfamily\footnotesize,
+    breakatwhitespace=false,         
+    breaklines=true,                 
+    captionpos=b,                    
+    keepspaces=true,                 
+    numbers=left,                    
+    numbersep=5pt,                  
+    showspaces=false,                
+    showstringspaces=false,
+    showtabs=false,                  
+    tabsize=2
+}
+
+\lstset{style=mystyle}
+
+\title{Obligatorisk oppgave 1, STK1100, Vår 2021}
+\author{Cory Alexander Balaton}
+\date{}
+
+\begin{document}
+
+\maketitle 
+\newpage
+
+\section*{Oppgave 1}
+
+a) Begivenheten av at hver av de 5 personene går av heisen i hver sin etasje tilsvarer et ordnet utvalg av 5 etasjer av 11.
+
+\begin{equation}
+    \begin{split}
+        N(a) &= 11 \cdot 10 \cdot 9 \cdot 8 \cdot 7\\
+             &= 55440
+    \end{split}
+\end{equation}
+
+For å finne sannsynligheten for at de 5 personene går av heisen i hver sin etasje, så må vi ta $N(A)$ og dele det med antall gunstige måter for 5 personer
+å velge en etasje å gå av på.
+
+\begin{equation}
+    \begin{split}
+        N &= 11^5 \\
+          &= 161051 
+    \end{split}
+\end{equation}
+
+\begin{equation}
+    \begin{split}
+        P(A) &= \frac{N(A)}{N} \\
+             &= \frac{55440}{161051} \\
+             &\approx 0.3442
+    \end{split}
+\end{equation}
+
+b) Begivenheten minst 2 personer går av i samme etasje er komplementærbegivenheten til at hver person går av i hver sin etasje, og kan derfor uttrykkes slik:
+
+\begin{equation}
+    \begin{split}
+        P(A)' &= 1 - P(A) \\
+              &\approx 1 - 0.3442 \\
+              &\approx 0.6558
+    \end{split}
+\end{equation}
+
+\newpage
+
+c) For å finne ut av hvor mange grupper på 3 man kan lage av 5 personer, så bruker man binomialkoeffisienten (Jeg antar at rekkefølgen av personene ikke spiller rolle).
+
+\begin{equation}
+    \begin{split}
+        {5 \choose 3} &= \frac{5!}{3!(5-3)!} \\
+                      &= \frac{5 \cdot 4}{2} \\
+                      &= 10
+    \end{split}
+\end{equation}
+
+d) For å finne sannsynligheten til at alarmsystemet fungerer, så må vi først finne ut sannsynligheten for at subsystemene fungerer. 
+Kommer til å bruke at $P(S) =$ sannsynligheten for at hele systemet fungerer, $P_1(S) =$ sannsynligheten for at komponent 1 fungerer, og $P_{12}(S) =$ sannsynligheten for at komponent 1 og 2 fungerer osv.
+
+\begin{equation}
+    \begin{split}
+        P_{12}(S) = P_{34}(S) &= 1 - (P_1(S)' \cdot P_2(S)') \\
+        &= 1 - (0.1 \cdot 0.1) \\
+        &= 1 - 0.01 \\
+        &= 0.99        
+    \end{split}
+\end{equation}
+
+\begin{equation}
+    \begin{split}
+        P_{345}(S) &= P_{34}(S) \cdot P_5(S) \\
+                 &= 0.99 \cdot 0.9 \\
+                 &= 0.891
+    \end{split}
+\end{equation}
+
+\begin{equation}
+    \begin{split}
+        P(S) &= 1 - (P_{345}(S)' \cdot P_{12}(S)') \\ 
+             &= 1 - (0.109 \cdot 0.01) \\
+             &= 1 - 0.00109 \\
+             &= 0.99891
+    \end{split}
+\end{equation}
+
+\newpage
+
+\section*{Oppgave 2}
+
+Begynner med å sette navn på informasjonen som er gitt. \\
+Sannsynligheten for at gutten glemmer å mate gullfiskenfisken: $P(A') = 0.25$ \\
+Sannsynligheten for at gullfisken er død gitt at gutten har matet den: $P(B | A) = 0.9$ \\
+Sannsynligheten for at gullfisken er død gitt at gutten har ikke matet den: $P(B | A') = 0.5$ \\
+Sannsynligheten for at gutten ikke har matet gullfisken gitt at den er død: $P(A' | B')$ \\
+
+\begin{equation}
+    \begin{split}
+        P(A' | B') &= \frac{p(A' \cap B')}{P(B')}
+    \end{split}
+\end{equation}
+
+For å finne $P(B')$, så kan man bruke regelen $P(B) = P(B|A_1) \cdot P(A_1) + P(B|A_2) \cdot P(A_2) + \cdots + P(B|A_n) \cdot P(A_n)$, der alle $A_n$ er disjunkte.
+Siden vi har $P(B|A)$ og $P(B|A')$, så må vi først finne $P(B)$ og deretter ta komplimentet.
+
+\begin{equation}
+    \begin{split}
+        P(B') &= 1 - (P(B|A) \cdot P(A) + P(B|A') \cdot P(A')) \\
+              &= 1 - (0.9 \cdot 0.75 + 0.5 \cdot 0.25) \\
+              &= 1 - (\frac{27}{40} + \frac{1}{8}) \\
+              &= 1 - \frac{4}{5} \\
+              &= \frac{1}{5}
+    \end{split}
+\end{equation}
+
+Nå vil man finne $P(A' \cap B')$, og man kan gjøre det ved å ta komplimentet til $P(A \cup B)$. \\
+Vi vet også at $P(A \cup B) = P(A) + P(B) - P(A \cap B)$. \\
+Vi har $P(A)$ og $P(A)$, og vi trenger nå bare å finne $P(A \cap B)$, og vi kan gjøre det ved å bruke produktregelen.
+
+\begin{equation}
+    \begin{split}
+        P(A \cap B) &= P(A) \cdot P(B|A) \\
+                    &= \frac{3}{4} \cdot \frac{9}{10} \\
+                    &= \frac{27}{40}
+    \end{split}
+\end{equation}
+
+\begin{equation}
+    \begin{split}
+        P(A \cup B) &= P(A) + P(B) - P(A \cap B) \\
+                    &= \frac{3}{4} + \frac{4}{5} - \frac{27}{40} \\
+                    &= \frac{30}{40} + \frac{32}{40} - \frac{27}{40} \\
+                    &= \frac{35}{40} \\
+                    &= \frac{7}{8}
+    \end{split}
+\end{equation}
+
+\begin{equation}
+    \begin{split}
+        P(A' \cap B') &= 1 - P(A \cup B) \\
+                      &= 1 - \frac{7}{8} \\
+                      &= \frac{1}{8} 
+    \end{split}
+\end{equation}
+
+Nå har vi funnet det vi trenger for å løse $P(A' | B')$.
+
+\begin{equation}
+    \begin{split}
+        P(A' | B') &= \frac{p(A' \cap B')}{P(B')} \\
+                   &= \frac{\frac{1}{8}}{\frac{1}{5}} \\
+                   &= \frac{5}{8}
+    \end{split}
+\end{equation}
+
+Sannsynligheten for at gutten har glemt er da $\frac{5}{8}$
+
+PS.
+
+I etterkant innså jeg at $P(B' | A')$ er komplimentet til $P(B | A')$, og dermed kunne jeg brukt Bayes teorem til å finne $P(A' | B')$, 
+som er mye enklere enn det jeg først gjorde.
+
+\begin{equation}
+    \begin{split}
+        P(A' | B') &= \frac{P(B' | A') \cdot P(A')}{P(B')} \\
+                   &= \frac{\frac{1}{2} \cdot \frac{1}{4}}{\frac{1}{5}} \\
+                   &= \frac{\frac{1}{8}}{\frac{1}{5}} \\
+                   &= \frac{5}{8}
+    \end{split}
+\end{equation}
+
+\newpage
+
+\section*{Oppgave 3}
+
+a) 
+Vi vil finne $P(X \leq x)$, og for å finne denne kumulative sannsynligheten, så er det enklere å finne overlevelsessannsynligheten først, og deretter
+ta komplimentet til den sannsynligheten. \\
+Siden mannen er 35 år gammel og vi vil regne ut kumulative sannsynligheten for tiden han har igjen. Da kan overlevelsessannsynligheten skrives som 
+$S(x) = P(X > x) = P(X > 35) \cdot P(X > 36 | X \geq 36) \cdot \dots \cdot P(X > x | X \geq x)$
+$q_x$ beskriver sannsynligheten for at en $x$ år gammel person kommer til å dø innen et år, og kan uttrykkes som $P(X = x | X \geq x)$,
+og siden vi har data for $q_x$, så kan vi skrive om overlevelsessannsynligheten:
+
+\begin{equation}
+    \begin{split}
+        P(X > x) &= P(X > 35) \cdot P(X > 36 | X \geq 36) \cdot \dots \cdot P(X > x | X \geq x) \\
+                 &= (1 - P(X = 35)) \cdot (1 - P(X = 35 | X \geq 35)) \cdot \dots \cdot (1 - P(X = x | X \geq x)) \\
+                 &= (1 - q_{35}) \cdot (1 - q_{36} \cdot \dots \cdot (1 - q_x)) \\
+                 &= \prod_{y=0}^x (1 - q_{35+y}) \\
+    \end{split}
+\end{equation}
+
+Vi ser nå at $P(X > x)$ og $P(X \leq x)$ er komplimentære hendelser til hverandre, og får derfor:
+
+\begin{equation}
+    \begin{split}
+        P(X \leq x) &= 1 - P(X > x) \\
+                    &= 1 - \prod_{y=0}^x (1 - q_{35+y})
+    \end{split}
+\end{equation}
+
+b) En kumulativ sannsynlighet kan beskrives ved likningen $P(X \leq x) = P(0) + P(1) + \dots + P(x-1) + P(x)$, og ved å forandre på uttrykket, så får man:
+
+\begin{equation}
+    \begin{split}
+        P(X \leq x) &= p(0) + p(1) + \dots + p(x-1) + p(x) \\
+               p(x) &= P(X \leq x) - (p(0) + p(1) + \dots + p(x-1)) \\
+                    &= P(X \leq x) - P(X \leq x - 1)
+    \end{split}
+\end{equation}
+
+c)
+
+\lstinputlisting[language=Python]{../Python/1c.py}
+
+
+\end{document}
