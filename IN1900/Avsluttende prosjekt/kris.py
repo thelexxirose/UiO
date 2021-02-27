@@ -1,3 +1,5 @@
+import numpy as np
+
 def __call__(self, u, t):
     n = len(self.region)
     SEIR_list = [u[i:i+6] for i in range(0, len(u), 6)]
