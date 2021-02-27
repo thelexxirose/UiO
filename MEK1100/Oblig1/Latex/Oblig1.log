@@ -1,10 +1,10 @@
-This is pdfTeX, Version 3.14159265-2.6-1.40.20 (TeX Live 2019/Debian) (preloaded format=pdflatex 2021.2.23)  23 FEB 2021 13:58
+This is pdfTeX, Version 3.14159265-2.6-1.40.20 (TeX Live 2019/Debian) (preloaded format=pdflatex 2021.2.23)  24 FEB 2021 22:16
 entering extended mode
  restricted \write18 enabled.
  file:line:error style messages enabled.
  %&-line parsing enabled.
-**/home/cory/Documents/UiO/MAT1110/Oblig1/Latex/oblig1.tex
-(/home/cory/Documents/UiO/MAT1110/Oblig1/Latex/oblig1.tex
+**/home/cory/Documents/UiO/MEK1100/Oblig1/Latex/Oblig1.tex
+(/home/cory/Documents/UiO/MEK1100/Oblig1/Latex/Oblig1.tex
 LaTeX2e <2020-02-02> patch level 2
 L3 programming layer <2020-02-14> (/usr/share/texlive/texmf-dist/tex/latex/base/article.cls
 Document Class: article 2019/12/20 v1.4l Standard LaTeX document class
@@ -184,8 +184,8 @@ Package: fontenc 2020/02/11 v2.0o Standard LaTeX package
 File: l3backend-pdfmode.def 2020-02-03 L3 backend support: PDF mode
 \l__kernel_color_stack_int=\count199
 \l__pdf_internal_box=\box49
-) (/home/cory/Documents/UiO/MAT1110/Oblig1/Latex/oblig1.aux)
-\openout1 = `oblig1.aux'.
+) (/home/cory/Documents/UiO/MEK1100/Oblig1/Latex/Oblig1.aux)
+\openout1 = `Oblig1.aux'.
 
 LaTeX Font Info:    Checking defaults for OML/cmm/m/it on input line 44.
 LaTeX Font Info:    ... okay on input line 44.
@@ -247,58 +247,58 @@ File: epstopdf-sys.cfg 2010/07/13 v1.3 Configuration of (r)epstopdf for TeX Live
 \c@lstlisting=\count272
  [1
 
-{/var/lib/texmf/fonts/map/pdftex/updmap/pdftex.map}] [2] [3] (/usr/share/texlive/texmf-dist/tex/latex/listings/lstlang1.sty
+{/var/lib/texmf/fonts/map/pdftex/updmap/pdftex.map}] (/usr/share/texlive/texmf-dist/tex/latex/listings/lstlang1.sty
 File: lstlang1.sty 2019/09/10 1.8c listings language file
 )
-LaTeX Font Info:    Trying to load font information for T1+cmtt on input line 118.
+LaTeX Font Info:    Trying to load font information for T1+cmtt on input line 62.
  (/usr/share/texlive/texmf-dist/tex/latex/base/t1cmtt.fd
 File: t1cmtt.fd 2019/12/16 v2.5j Standard LaTeX font definitions
-) (/home/cory/Documents/UiO/MAT1110/Oblig1/Latex/../Python/1d.py)
-<../images/1d.png, id=27, 462.528pt x 346.896pt>
-File: ../images/1d.png Graphic file (type png)
-<use ../images/1d.png>
-Package pdftex.def Info: ../images/1d.png  used on input line 122.
-(pdftex.def)             Requested size: 370.02289pt x 277.51717pt.
- [4 <../images/1d.png>] [5]
-Underfull \hbox (badness 10000) in paragraph at lines 191--192
-
- []
-
-[6]
-Underfull \hbox (badness 10000) in paragraph at lines 225--226
-
- []
-
-[7] (/home/cory/Documents/UiO/MAT1110/Oblig1/Latex/../Python/2f.py)
-<../images/ellipse.png, id=47, 462.528pt x 346.896pt>
-File: ../images/ellipse.png Graphic file (type png)
-<use ../images/ellipse.png>
-Package pdftex.def Info: ../images/ellipse.png  used on input line 252.
+) (/home/cory/Documents/UiO/MEK1100/Oblig1/Latex/../Python/strlin.py)
+<../images/strlin_5.png, id=9, 462.528pt x 346.896pt>
+File: ../images/strlin_5.png Graphic file (type png)
+<use ../images/strlin_5.png>
+Package pdftex.def Info: ../images/strlin_5.png  used on input line 65.
 (pdftex.def)             Requested size: 231.26343pt x 173.44757pt.
-<../images/hyperbolic.png, id=48, 462.528pt x 346.896pt>
-File: ../images/hyperbolic.png Graphic file (type png)
-<use ../images/hyperbolic.png>
-Package pdftex.def Info: ../images/hyperbolic.png  used on input line 253.
+<../images/strlin_30.png, id=11, 462.528pt x 346.896pt>
+File: ../images/strlin_30.png Graphic file (type png)
+<use ../images/strlin_30.png>
+Package pdftex.def Info: ../images/strlin_30.png  used on input line 66.
 (pdftex.def)             Requested size: 231.26343pt x 173.44757pt.
 
-Overfull \hbox (75.13734pt too wide) in paragraph at lines 251--254
-[] [] 
+Overfull \hbox (35.06871pt too wide) in paragraph at lines 63--67
+|  [] [] 
  []
 
-[8 <../images/ellipse.png> <../images/hyperbolic.png>] (/home/cory/Documents/UiO/MAT1110/Oblig1/Latex/oblig1.aux) ) 
+
+Underfull \hbox (badness 10000) in paragraph at lines 63--67
+
+ []
+
+(/home/cory/Documents/UiO/MEK1100/Oblig1/Latex/../Python/vec.py [2 <../images/strlin_5.png> <../images/strlin_30.png>])
+<../images/vec_11.png, id=20, 462.528pt x 346.896pt>
+File: ../images/vec_11.png Graphic file (type png)
+<use ../images/vec_11.png>
+Package pdftex.def Info: ../images/vec_11.png  used on input line 72.
+(pdftex.def)             Requested size: 462.52686pt x 346.89514pt.
+
+Overfull \hbox (32.45822pt too wide) in paragraph at lines 70--73
+|  [] 
+ []
+
+[3] [4 <../images/vec_11.png>] (/home/cory/Documents/UiO/MEK1100/Oblig1/Latex/Oblig1.aux) ) 
 Here is how much of TeX's memory you used:
- 5472 strings out of 481239
- 75284 string characters out of 5920377
- 606011 words of memory out of 5000000
- 20655 multiletter control sequences out of 15000+600000
- 546213 words of font info for 54 fonts, out of 8000000 for 9000
+ 5441 strings out of 481239
+ 75037 string characters out of 5920377
+ 566030 words of memory out of 5000000
+ 20635 multiletter control sequences out of 15000+600000
+ 540004 words of font info for 39 fonts, out of 8000000 for 9000
  1141 hyphenation exceptions out of 8191
- 37i,21n,42p,304b,1374s stack positions out of 5000i,500n,10000p,200000b,80000s
-{/usr/share/texmf/fonts/enc/dvips/cm-super/cm-super-t1.enc}</usr/share/texlive/texmf-dist/fonts/type1/public/amsfonts/cm/cmex10.pfb></usr/share/texlive/texmf-dist/fonts/type1/public/amsfonts/cmextra/cmex8.pfb></usr/share/texlive/texmf-dist/fonts/type1/public/amsfonts/cm/cmmi12.pfb></usr/share/texlive/texmf-dist/fonts/type1/public/amsfonts/cm/cmmi6.pfb></usr/share/texlive/texmf-dist/fonts/type1/public/amsfonts/cm/cmmi8.pfb></usr/share/texlive/texmf-dist/fonts/type1/public/amsfonts/cm/cmr12.pfb></usr/share/texlive/texmf-dist/fonts/type1/public/amsfonts/cm/cmr6.pfb></usr/share/texlive/texmf-dist/fonts/type1/public/amsfonts/cm/cmr8.pfb></usr/share/texlive/texmf-dist/fonts/type1/public/amsfonts/cm/cmsy10.pfb></usr/share/texlive/texmf-dist/fonts/type1/public/amsfonts/cm/cmsy6.pfb></usr/share/texlive/texmf-dist/fonts/type1/public/amsfonts/cm/cmsy8.pfb></usr/share/texmf/fonts/type1/public/cm-super/sfbx0800.pfb></usr/share/texmf/fonts/type1/public/cm-super/sfbx1200.pfb></usr/share/texmf/fonts/type1/public/cm-super/sfbx1728.pfb></usr/share/texmf/fonts/type1/public/cm-super/sfrm0600.pfb></usr/share/texmf/fonts/type1/public/cm-super/sfrm1200.pfb></usr/share/texmf/fonts/type1/public/cm-super/sfrm1440.pfb></usr/share/texmf/fonts/type1/public/cm-super/sfrm2074.pfb></usr/share/texmf/fonts/type1/public/cm-super/sftt1000.pfb>
-Output written on /home/cory/Documents/UiO/MAT1110/Oblig1/Latex/oblig1.pdf (8 pages, 562795 bytes).
+ 37i,6n,42p,304b,1738s stack positions out of 5000i,500n,10000p,200000b,80000s
+{/usr/share/texmf/fonts/enc/dvips/cm-super/cm-super-t1.enc}</usr/share/texmf/fonts/type1/public/cm-super/sfbx1728.pfb></usr/share/texmf/fonts/type1/public/cm-super/sfrm0600.pfb></usr/share/texmf/fonts/type1/public/cm-super/sfrm1200.pfb></usr/share/texmf/fonts/type1/public/cm-super/sfrm1440.pfb></usr/share/texmf/fonts/type1/public/cm-super/sfrm2074.pfb></usr/share/texmf/fonts/type1/public/cm-super/sftt1000.pfb>
+Output written on /home/cory/Documents/UiO/MEK1100/Oblig1/Latex/Oblig1.pdf (4 pages, 240859 bytes).
 PDF statistics:
- 115 PDF objects out of 1000 (max. 8388607)
- 79 compressed objects within 1 object stream
+ 49 PDF objects out of 1000 (max. 8388607)
+ 30 compressed objects within 1 object stream
  0 named destinations out of 1000 (max. 500000)
  16 words of extra memory for PDF output out of 10000 (max. 10000000)
 

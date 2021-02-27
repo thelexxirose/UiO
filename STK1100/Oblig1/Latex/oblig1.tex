@@ -3,8 +3,8 @@
 \usepackage{mathtools}
 \usepackage{amsthm}
 \usepackage{cancel}
-%\usepackage{graphicx}
-%\graphicspath{ {../images/} }
+\usepackage{graphicx}
+\graphicspath{ {../images/} }
 
 \usepackage{listings}
 \usepackage{xcolor}
@@ -132,8 +132,8 @@ Kommer til å bruke at $P(S) =$ sannsynligheten for at hele systemet fungerer, $
 
 Begynner med å sette navn på informasjonen som er gitt. \\
 Sannsynligheten for at gutten glemmer å mate gullfiskenfisken: $P(A') = 0.25$ \\
-Sannsynligheten for at gullfisken er død gitt at gutten har matet den: $P(B | A) = 0.9$ \\
-Sannsynligheten for at gullfisken er død gitt at gutten har ikke matet den: $P(B | A') = 0.5$ \\
+Sannsynligheten for at gullfisken overlever gitt at gutten har matet den: $P(B | A) = 0.9$ \\
+Sannsynligheten for at gullfisken overlever gitt at gutten har ikke matet den: $P(B | A') = 0.5$ \\
 Sannsynligheten for at gutten ikke har matet gullfisken gitt at den er død: $P(A' | B')$ \\
 
 \begin{equation}
@@ -251,9 +251,88 @@ b) En kumulativ sannsynlighet kan beskrives ved likningen $P(X \leq x) = P(0) + 
     \end{split}
 \end{equation}
 
+\newpage
+
 c)
 
-\lstinputlisting[language=Python]{../Python/1c.py}
+\lstinputlisting[language=Python]{../Python/three_c.py}
 
+\newpage
+
+d) 
+Hvis mannen dør før han fyller 67 år, så vil han ikke få noen pensjonsutbetalinger. Siden han er 35 år gammel, så vil $X < 67 - 35 \Rightarrow X < 32 \Rightarrow X \leq 31$.
+Hvis han blir 67 eller eldre, så vil han få pensjonsutbetalinger, og nåverdien av utbetalingene uttrykkes som:
+
+\begin{equation}
+    \begin{split}
+        h(X) &= \sum_{k=32}^X \frac{100000}{1.03^k} \\
+             &= \frac{100000}{1.03^{32}} + \frac{100000}{1.03^{32+1}} + \dots + \frac{100000}{1.03^{32+X}} \\
+             &= \frac{100000}{1.03^{32}} \cdot (1 + \frac{1}{1.03} + \frac{1}{1.03^2} + \dots + \frac{1}{1.03^X}) \\
+             &= \frac{100000}{1.03^{32}} \cdot \sum_{k=0}^{X-32} \frac{1}{1.03^k} \\
+             &= \frac{100000}{1.03^{32}} \cdot \frac{1 - (\frac{1}{1.03})^{X-31}}{1 - (\frac{1}{1.03})} \\
+    \end{split}
+\end{equation}
+
+\newpage
+
+e)
+Man regner ut den forventede nåverdien ved å ta summen av alle nåverdiene av utbetalingene ganget med punktsannsynlighetene
+som man fant i b ($h(x) \cdot p(x)$), og tar dem fra $x = 0$ til $x = 106 - 35 = 71$ fordi maks levetid er definert som $106$ år, og får da uttrykket:
+
+\begin{equation}
+    E[h(X)] = \sum_{x=0}^{71} h(x) \cdot p(x)
+\end{equation}
+
+For å regne ut den forventede nåverdien, så ekspanderer man på programmet i 3c:
+
+\lstinputlisting[language=Python]{../Python/three_d.py}
+
+Etter å ha kjørt programmet, så får man ut a forventningsverdien er $501511.92449024785 \approx 501512$
+
+\newpage
+
+f)
+Når man skal regne ut den samlede nåverdien av premieinnbetalingene, så tar man summen fra mannen er $35$ år gammel til og med han fyller $66$, eller om til han dør hvis han dør før han rekker å bli $66$, som kan uttrykkes som $min(X, 31)$. 
+Siden vi har i hele oppgaven tatt i utgangspunktet at forsikringen starter fra mannen er fylt $35$, så summerer vi uttrykket fra $0$ til $31$.\\
+Vi kan forenkle uttrykket ved å ta $K$ utenfor summeringen, og deretter omgjøre summeringen om til formelen til en endelig geometrisk rekke.
+
+\begin{equation}
+    \begin{split}
+        K \cdot g(X) &= \sum_{k=0}^{min(X, 31)} \frac{K}{1.03^k} \\
+                     &= K \cdot \sum_{k=0}^{min(X, 31)} \frac{1}{1.03^k} \\
+                     &= K \cdot \frac{1 - (\frac{1}{1.03}^{min(X, 31) + 1})}{1 - (\frac{1}{1.03})}
+    \end{split}
+\end{equation}
+
+\newpage
+
+g)
+Akkurat som i e, så får vi den forventede nåverdien ved å summere alle nåverdier av premieinnbetalingene ganget med punktsannsynlighetene, 
+og deretter ganger det med $K$ og får den forventede nåverdien per krone ganget med $k$. Summeringen er da fra $0$ til $106 - 35 = 71$ og man får uttrykket: 
+
+\begin{equation}
+    K \cdot E[g(X)] = K \cdot \sum_{x=0}^{71} g(x) \cdot p(x)
+\end{equation}
+
+For å regne dette ut, så ekspanderer vi enda en gang på programmet i 3c:
+
+\lstinputlisting[language=Python]{../Python/three_g.py}
+
+Etter å ha kjørt programmet, så ser man ut a forventningsverdien er $K \cdot 20.603314835251663 \approx K \cdot 20.6033$
+
+\newpage
+
+h)
+
+\begin{equation}
+    \begin{split}
+        K \cdot E[g(X)] &= E[h(X)] \\
+                      K &= \frac{E[h(X)]}{E[g(X)]} \\
+                        &= \frac{501512}{20.6033} \\
+                        &= 24341.3434
+    \end{split}
+\end{equation}
+
+Den årlige premien blir på $24341.3434$ kr.
 
 \end{document}
