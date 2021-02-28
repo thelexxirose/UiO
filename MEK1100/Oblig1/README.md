@@ -1,27 +1,29 @@
-## Running the programs using docker
+## Running the programs
 
-The easiest way of running these programs is to run them with docker.
+I am going to assume that you have cloned this repository, so I will be skipping this part of the process.
 
-The first thing you have to do is to pull the repository by typing this command in the terminal:
+To run the programs, you first need to set an environment variable that points to the **MEK1100** directory.
+To do that run this command in the terminal:
 ```
-docker pull thelexxirose/mek1100_oblig1
+export MEK1100=<path to MEK1100 dir>
+```
+If you want the environment variable to be permanent, then you can edit the *.profile* file. 
+To edit the file, type this command:
+
+```
+sudo nano ~/.profile
+```
+then navigate your way down to the bottom of the file, and then type in the same command we used in the terminal before:
+```
+export MEK1100=<path to MEK1100 dir>
+```
+and then save the file by pushing **ctrl + x**, then **y**, and then **enter**
+
+
+Now make sure that you have installed all the necessary dependencies. In the **UiO** directory, type this command:
+
+```
+pip3 install -r requirements.txt
 ```
 
-After you have pulled down the repo, run the image by typing in this command:
-```
-docker run -t -d --name mek1100_oblig1 thelexxirose/mek1100_oblig1
-```
-
-To check if the container is up and running, you can use this command:
-```
-docker ps
-```
-and the container you just created should pop up.
-
-Now you can run the command under to access the bash terminal of the container:
-```
-docker exec -it mek1100_oblig1 /bin/bash
-```
-
-If you want to run any of the programs, just type `python <filename>.py`, and then you'll run the program.
-To run the test, simply type `pytest`, and then it'll tell you if it was successful or not.
+In **MEK1100/Python** you can type in `python3 <filename>.py`, and it should run the program.
