@@ -1,12 +1,12 @@
 import numpy as np 
 import matplotlib.pyplot as plt
-import abspath
+import os
 from velfield import velfield
 
-# Local pypackage that I created to easily access the absolute path of some selected directories.
-path = abspath.get_path("MEK1100") + "/Oblig1/images"
+# Accessing an environment variable that points to the MEK1100 directory
+path = f"{os.getenv('MEK1100')}/Oblig1/images"
 
-# Chose an odd number to include the point in the middle where ther is no flow.
+# Chose an odd number to include the point in the middle where there is no flow.
 n_val = 11
 
 # Gets values x, y, u and v, then plots them into the vector field.
