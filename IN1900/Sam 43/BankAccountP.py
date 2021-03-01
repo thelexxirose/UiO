@@ -57,11 +57,14 @@ def test_BankAccountP_class():
     calculated_2 = a2.get_balance()
     expected_2 = 11000
 
-    assert abs(calculated_1 - expected_1) < e and abs(calculated_2 - expected_2) < e
+    assert abs(calculated_1 - expected_1) < e \
+        and abs(calculated_2 - expected_2) < e
 
 
 test_BankAccountP_class()
 
 '''
-(base) corybalaton@Corys-MacBook-Pro Sam 43 % /Users/corybalaton/opt/anaconda3/bin/python "/Users/corybalaton/Documents/UiO/IN1900/Sam 43/BankAccountP.py"
+(base) corybalaton@Corys-MacBook-Pro Sam 43 %
+/Users/corybalaton/opt/anaconda3/bin/python
+"/Users/corybalaton/Documents/UiO/IN1900/Sam 43/BankAccountP.py"
 '''

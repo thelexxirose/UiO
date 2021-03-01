@@ -11,7 +11,8 @@ t = np.linspace(-b, b, 1001)
 # Defined r(t) as a lambda function that returns a tuple
 
 
-def r(t): return (a*np.arcsinh(t/a), np.sqrt(a**2 + t**2))
+def r(t):
+    return (a*np.arcsinh(t/a), np.sqrt(a**2 + t**2))
 
 
 # plot r(t)

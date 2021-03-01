@@ -52,11 +52,14 @@ def test_bank_class():
     expected1 = 9000
     calculated2 = a2.get_balance()
     expected2 = 11000
-    assert abs(calculated1 - expected1) < e and abs(calculated2 - expected2) < e
+    assert abs(calculated1 - expected1) < e \
+        and abs(calculated2 - expected2) < e
 
 
 test_bank_class()
 
 '''
-(base) corybalaton@Corys-MacBook-Pro Uke 43 % /Users/corybalaton/opt/anaconda3/bin/python "/Users/corybalaton/Documents/UiO/IN1900/Uke 43/BankAccountP.py"
+(base) corybalaton@Corys-MacBook-Pro Uke 43 %
+/Users/corybalaton/opt/anaconda3/bin/python
+"/Users/corybalaton/Documents/UiO/IN1900/Uke 43/BankAccountP.py"
 '''

@@ -4,7 +4,7 @@ import math as m
 def N_of_t(B, k, t, N_0):
     # Calculates C given N(0)
     C = B/N_0 - 1
-    #print("C is: " + str(C))
+    # print("C is: " + str(C))
     # Returns N(t)
     return (B/(1 + C*(m.exp(-k*t))))
 
@@ -55,7 +55,7 @@ print("|====================|")
 
 
 '''
-(base) corybalaton@Corys-MBP Uke 36 % python3 population_table2.py 
+(base) corybalaton@Corys-MBP Uke 36 % python3 population_table2.py
 |======METHOD 1======|
 t:  0,  N:  5000
 t: 13,  N: 29967

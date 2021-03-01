@@ -83,5 +83,7 @@ plt.savefig("simple_ODE_class_ODESolver_f.png")
 plt.show()
 
 '''
-(base) corybalaton@Corys-MacBook-Pro Uke 47 % /usr/local/bin/python3 "/Users/corybalaton/Documents/UiO/IN1900/Uke 47/simple_ODE_class_ODESolver.py"
+(base) corybalaton@Corys-MacBook-Pro Uke 47 %
+/usr/local/bin/python3
+"/Users/corybalaton/Documents/UiO/IN1900/Uke 47/simple_ODE_class_ODESolver.py"
 '''

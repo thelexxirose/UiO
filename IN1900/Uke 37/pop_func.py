@@ -11,7 +11,10 @@ for i in range(1, 49):
 
 
 '''
-(base) corybalaton@Corys-MacBook-Pro Uke 37 % /Users/corybalaton/opt/anaconda3/bin/python "/Users/corybalaton/Documents/UiO/IN1900/Uke 37/pop_func.py"
+(base) corybalaton@Corys-MacBook-Pro Uke 37 %
+/Users/corybalaton/opt/anaconda3/bin/python
+"/Users/corybalaton/Documents/UiO/IN1900/Uke 37/pop_func.py"
+
 t =  1 : 5974.732
 t =  2 : 7109.463
 t =  3 : 8418.494

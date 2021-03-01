@@ -1,6 +1,5 @@
 import numpy as np
 import matplotlib.pyplot as plt
-from scipy.interpolate import make_interp_spline, BSpline
 
 
 def arr(filename):
@@ -25,5 +24,7 @@ plt.legend()
 plt.savefig("plot_round_off_error.png")
 
 '''
-(base) corybalaton@eduroam-193-157-179-38 Uke 42 % /Users/corybalaton/opt/anaconda3/bin/python "/Users/corybalaton/Documents/UiO/IN1900/Uke 42/plot_round_off_error.py"
+(base) corybalaton@eduroam-193-157-179-38 Uke 42 %
+/Users/corybalaton/opt/anaconda3/bin/python
+"/Users/corybalaton/Documents/UiO/IN1900/Uke 42/plot_round_off_error.py"
 '''

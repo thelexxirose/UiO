@@ -15,7 +15,7 @@ for i in range(2, 10):
 
 
 '''
-(base) corybalaton@Corys-MBP Uke 36 % python3 alkane.py 
+(base) corybalaton@Corys-MBP Uke 36 % python3 alkane.py
 M(C2H 6) = 30.069 g/mol)
 M(C3H 8) = 44.096 g/mol)
 M(C4H10) = 58.123 g/mol)

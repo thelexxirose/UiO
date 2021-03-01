@@ -41,5 +41,7 @@ test_mean()
 test_standard_deviation()
 
 '''
-(base) corybalaton@Corys-MacBook-Pro Uke 37 % /Users/corybalaton/opt/anaconda3/bin/python "/Users/corybalaton/Documents/UiO/IN1900/Uke 37/stat.py"
+(base) corybalaton@Corys-MacBook-Pro Uke 37 %
+/Users/corybalaton/opt/anaconda3/bin/python
+"/Users/corybalaton/Documents/UiO/IN1900/Uke 37/stat.py"
 '''

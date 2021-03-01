@@ -30,5 +30,7 @@ plt.plot(t_array_2, y_array_2(t_array_2))
 plt.savefig("vectorized")
 
 '''
-(base) corybalaton@Corys-MacBook-Pro Uke 39 % /Users/corybalaton/opt/anaconda3/bin/python "/Users/corybalaton/Documents/UiO/IN1900/Uke 39/oscillating_spring.py"
+(base) corybalaton@Corys-MacBook-Pro Uke 39 %
+/Users/corybalaton/opt/anaconda3/bin/python
+"/Users/corybalaton/Documents/UiO/IN1900/Uke 39/oscillating_spring.py"
 '''

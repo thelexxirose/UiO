@@ -1,5 +1,6 @@
-from SEIR import *
+from SEIR import Region, ProblemSEIR, SolverSEIR
 import numpy as np
+import matplotlib.pyplot as plt
 
 # Class that is basically like the Region class, except that it takes in a latitude and longitude
 
@@ -96,7 +97,8 @@ class ProblemInteraction(ProblemSEIR):
                 self.I[i] += SEIR_list[j][i][3]
                 self.Ia[i] += SEIR_list[j][i][4]
                 self.R[i] += SEIR_list[j][i][5]
-            self.arr.append([self.S[i], self.E1[i], self.E2[i], self.I[i], self.Ia[i], self.R[i]])
+            self.arr.append([self.S[i], self.E1[i],
+                             self.E2[i], self.I[i], self.Ia[i], self.R[i]])
 
         self.set_SEIR_values(self.arr, t)
 
@@ -108,12 +110,15 @@ class ProblemInteraction(ProblemSEIR):
         vals = [[0, 'Susceptible'], [1, "Exposed 1"], [2, "Exposed 2"],
                 [3, 'Infectious 1'], [4, 'Infectious 2'], [5, 'Removed']]
         for j in vals:
-            plt.plot(self.t, [self.u[i][j[0]] for i in range(len(self.u))], label=j[1])
+            plt.plot(self.t, [self.u[i][j[0]] for i in range(len(self.u))],
+                     label=j[1])
 
 
 if __name__ == "__main__":
-    innlandet = RegionInteraction("Innlandet", S_0=371385, E2_0=0, phi=60.7945, lmbda=11.0680)
-    oslo = RegionInteraction("Oslo", S_0=693494, E2_0=100, phi=59.9, lmbda=10.8)
+    innlandet = RegionInteraction("Innlandet", S_0=371385, E2_0=0,
+                                  phi=60.7945, lmbda=11.0680)
+    oslo = RegionInteraction("Oslo", S_0=693494, E2_0=100,
+                             phi=59.9, lmbda=10.8)
     print(oslo.distance(innlandet))
 
     s = ProblemInteraction([innlandet, oslo], "s", 0.5)

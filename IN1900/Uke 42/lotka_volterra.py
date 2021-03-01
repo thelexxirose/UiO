@@ -21,5 +21,7 @@ plt.legend()
 plt.savefig("lotka_volterra.png")
 
 '''
-(base) corybalaton@eduroam-193-157-179-38 Uke 42 % /Users/corybalaton/opt/anaconda3/bin/python "/Users/corybalaton/Documents/UiO/IN1900/Uke 42/lotka_volterra.py"
+(base) corybalaton@eduroam-193-157-179-38 Uke 42 %
+/Users/corybalaton/opt/anaconda3/bin/python
+"/Users/corybalaton/Documents/UiO/IN1900/Uke 42/lotka_volterra.py"
 '''

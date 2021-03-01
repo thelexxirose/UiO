@@ -1,7 +1,8 @@
 import numpy as np
 import matplotlib.pyplot as plt
 
-# Function that plots a figure with different a,b,c values and output a png file
+# Function that plots a figure with different a,b,c
+# values and output a png file
 
 
 def plot(a, b, c, name, density):
@@ -17,11 +18,12 @@ def plot(a, b, c, name, density):
 
 
 # Make a linspace to be used for the meshgrid
-I = np.linspace(-30, 30, 1001)
+dim = np.linspace(-30, 30, 1001)
 
 # Create a meshgrid that spans from -30 to 30 in both the x and y directions
-x, y = np.meshgrid(I, I)
+x, y = np.meshgrid(dim, dim)
 
-# Plot different contour graphs where a,b and c are chosen so that -(a^2 + bc) > 0 and -(a^2 + bc) < 0
+# Plot different contour graphs where a,b and c are chosen so that
+# -(a^2 + bc) > 0 and -(a^2 + bc) < 0
 plot(2, -2, 3, "ellipse", 50)
 plot(2, 2, 3, "hyperbolic", 50)

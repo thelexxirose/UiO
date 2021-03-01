@@ -62,19 +62,22 @@ class RK4(ODESolver):
         return unew
 
 
-def analytical(t): return t*np.sin(t) + 2*np.cos(t)
+def analytical(t):
+    return t*np.sin(t) + 2*np.cos(t)
 
 
 t_a = np.linspace(0, 8*np.pi, 1001)
 plt.plot(t_a, analytical(t_a))
 
 
-def f(u, t): return t*np.cos(t) - 2*np.sin(t)
+def f(u, t):
+    return t*np.cos(t) - 2*np.sin(t)
 
 
 U0 = 2
 
-met = [[MidpointEuler(f), "midpoint euler"], [Heuns(f), "heuns"], [RK4(f), "rk4"]]
+met = [[MidpointEuler(f), "midpoint euler"],
+       [Heuns(f), "heuns"], [RK4(f), "rk4"]]
 
 for i in met:
     i[0].set_initial_condition(U0)
@@ -96,5 +99,7 @@ for i, n in enumerate(n):
 plt.show()
 
 '''
-(base) corybalaton@Corys-MacBook-Pro Uke 47 % /usr/local/bin/python3 "/Users/corybalaton/Documents/UiO/IN1900/Uke 47/compare_methods.py"
+(base) corybalaton@Corys-MacBook-Pro Uke 47 %
+/usr/local/bin/python3
+"/Users/corybalaton/Documents/UiO/IN1900/Uke 47/compare_methods.py"
 '''

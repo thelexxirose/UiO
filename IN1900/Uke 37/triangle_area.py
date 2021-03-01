@@ -24,5 +24,7 @@ def triangle_area(v):
 test_triangle_area()
 
 '''
-(base) corybalaton@Corys-MacBook-Pro Uke 37 % /Users/corybalaton/opt/anaconda3/bin/python "/Users/corybalaton/Documents/UiO/IN1900/Uke 37/triangle_area.py"
+(base) corybalaton@Corys-MacBook-Pro Uke 37 %
+/Users/corybalaton/opt/anaconda3/bin/python
+"/Users/corybalaton/Documents/UiO/IN1900/Uke 37/triangle_area.py"
 '''

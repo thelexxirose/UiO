@@ -27,5 +27,7 @@ def test_half_wave():
 test_half_wave()
 
 '''
-(base) corybalaton@Corys-MacBook-Pro Uke 37 % /Users/corybalaton/opt/anaconda3/bin/python "/Users/corybalaton/Documents/UiO/IN1900/Uke 37/half_wave.py"
+(base) corybalaton@Corys-MacBook-Pro Uke 37 %
+/Users/corybalaton/opt/anaconda3/bin/python
+"/Users/corybalaton/Documents/UiO/IN1900/Uke 37/half_wave.py"
 '''

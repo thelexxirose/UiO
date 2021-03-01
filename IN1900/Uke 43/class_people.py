@@ -27,7 +27,10 @@ p1.change_gender("Female")
 print(p1)
 
 '''
-(base) corybalaton@Corys-MacBook-Pro Uke 43 % /Users/corybalaton/opt/anaconda3/bin/python "/Users/corybalaton/Documents/UiO/IN1900/Uke 43/class_people.py"
+(base) corybalaton@Corys-MacBook-Pro Uke 43 %
+/Users/corybalaton/opt/anaconda3/bin/python
+"/Users/corybalaton/Documents/UiO/IN1900/Uke 43/class_people.py"
+
 name: John, age: 55, gender: Male
 name: Jenny, age: 55, gender: Female
 '''

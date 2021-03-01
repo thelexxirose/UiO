@@ -29,7 +29,7 @@ print(triangle2.c)
 def test_RightTriangle():
     success = False
     try:
-        triangle3 = RightTriangle(1, -1)
+        RightTriangle(1, -1)
     except ValueError:
         success = True
     assert success
@@ -40,7 +40,10 @@ test_RightTriangle()
 triangle2.plot_triangle()
 
 '''
-(base) corybalaton@Corys-MacBook-Pro Uke 43 % /Users/corybalaton/opt/anaconda3/bin/python "/Users/corybalaton/Documents/UiO/IN1900/Uke 43/right_triangle.py"
+(base) corybalaton@Corys-MacBook-Pro Uke 43 %
+/Users/corybalaton/opt/anaconda3/bin/python
+"/Users/corybalaton/Documents/UiO/IN1900/Uke 43/right_triangle.py"
+
 1.4142135623730951
 5.0
 '''

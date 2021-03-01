@@ -27,5 +27,7 @@ plt.savefig("F.png")
 plt.show()
 
 '''
-(base) corybalaton@Corys-MacBook-Pro Uke 43 % /Users/corybalaton/opt/anaconda3/bin/python "/Users/corybalaton/Documents/UiO/IN1900/Uke 43/F.py"
+(base) corybalaton@Corys-MacBook-Pro Uke 43 %
+/Users/corybalaton/opt/anaconda3/bin/python
+"/Users/corybalaton/Documents/UiO/IN1900/Uke 43/F.py"
 '''
