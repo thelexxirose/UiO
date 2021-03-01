@@ -1,11 +1,13 @@
 import math as m
 
+
 def f(x):
     ans = m.sin(x)
-    if(ans > 0):   
+    if(ans > 0):
         return ans
     else:
         return 0
+
 
 def test_half_wave():
     expected_1 = 0
@@ -21,8 +23,11 @@ def test_half_wave():
     assert success_1, msg
     assert success_2, msg
 
+
 test_half_wave()
 
 '''
-(base) corybalaton@Corys-MacBook-Pro Uke 37 % /Users/corybalaton/opt/anaconda3/bin/python "/Users/corybalaton/Documents/UiO/IN1900/Uke 37/half_wave.py"
+(base) corybalaton@Corys-MacBook-Pro Uke 37 %
+/Users/corybalaton/opt/anaconda3/bin/python
+"/Users/corybalaton/Documents/UiO/IN1900/Uke 37/half_wave.py"
 '''

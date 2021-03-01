@@ -5,6 +5,7 @@ def fibonacci(n, a=1, b=1):
 
     return fibonacci(n-1, b, a+b)
 
+
 for i in range(16):
     print(f"fibonacci n = {i:>2} <==> {fibonacci(i)}")
 

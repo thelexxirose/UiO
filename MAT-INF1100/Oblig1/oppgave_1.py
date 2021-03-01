@@ -1,5 +1,6 @@
 import math
 
+
 def for_form(n, a_1, a_0):
     s = 0
     for i in range(n+1):
@@ -11,8 +12,10 @@ def for_form(n, a_1, a_0):
             a_1 = s
     return s
 
+
 def analytical_form(n):
     return (2.0 - math.sqrt(5.0))**n
+
 
 print("Initial conditions: a_0 = 1, a_1 = 1 \n")
 

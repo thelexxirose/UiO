@@ -8,6 +8,7 @@ def quadratic_roots_input(a, b, c):
 
     return (f"The roots are: {x_1} and {x_2}")
 
+
 try:
     print(quadratic_roots_input(int(sys.argv[1]), int(sys.argv[2]), int(sys.argv[3])))
 except IndexError:
@@ -20,7 +21,7 @@ except IndexError:
         else:
             l.append(input("input missing value c: "))
     print(quadratic_roots_input(int(l[0]), int(l[1]), int(l[2])))
-    
+
 '''
 (base) corybalaton@Corys-MacBook-Pro Oblig % /Users/corybalaton/opt/anaconda3/bin/python "/Users/corybalaton/Documents/UiO/IN1900/Uke 38/Oblig/quadratic_roots_error.py" 2
 input missing value b: 0

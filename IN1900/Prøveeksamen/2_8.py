@@ -1,5 +1,6 @@
 from math import sqrt, ceil
 
+
 def is_prime(n):
     upper_limit = ceil(sqrt(n))
     is_p = True

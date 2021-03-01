@@ -14,7 +14,7 @@ for i, line in enumerate(new_list):
 M = 0
 for i in range(1, len(new_list)):
     M += float(new_list[i][1]) * float(new_list[i][2])
-    
+
 print(f"M = {M:.4f} g/mol")
 
 '''

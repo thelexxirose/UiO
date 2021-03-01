@@ -1,6 +1,6 @@
 import numpy as np
 import matplotlib.pyplot as plt
-from scipy.interpolate import make_interp_spline, BSpline
+
 
 def arr(filename):
     delta_x = []
@@ -15,6 +15,7 @@ def arr(filename):
 
     return delta_x, abs_err, n
 
+
 delta_x, abs_err, n = np.array(arr("approx_derivative_sine.txt"))
 
 plt.semilogy(n, delta_x, label="delta_x")
@@ -23,5 +24,7 @@ plt.legend()
 plt.savefig("plot_round_off_error.png")
 
 '''
-(base) corybalaton@eduroam-193-157-179-38 Uke 42 % /Users/corybalaton/opt/anaconda3/bin/python "/Users/corybalaton/Documents/UiO/IN1900/Uke 42/plot_round_off_error.py"
+(base) corybalaton@eduroam-193-157-179-38 Uke 42 %
+/Users/corybalaton/opt/anaconda3/bin/python
+"/Users/corybalaton/Documents/UiO/IN1900/Uke 42/plot_round_off_error.py"
 '''

@@ -7,6 +7,7 @@ class F:
     def __call__(self, x):
         return self.a*x**2 + self.b*x + self.c
 
+
 f = F(1.0, 2.0, 0.0)
 
 print(f(2))

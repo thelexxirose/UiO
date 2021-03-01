@@ -8,6 +8,7 @@ class Mammal:
     def identify_mammal(self):
         print("I am a mammal")
 
+
 class Primate(Mammal):
 
     def info(self):
@@ -16,6 +17,7 @@ class Primate(Mammal):
     def identify_primate(self):
         print("I am a primate")
 
+
 class Human(Primate):
 
     def info(self):
@@ -23,6 +25,7 @@ class Human(Primate):
 
     def identify_human(self):
         print("I am a human")
+
 
 class Ape(Primate):
 
@@ -40,16 +43,16 @@ print(John.info())
 John.identify_mammal()
 John.identify_primate()
 John.identify_human()
-#The method identify_ape() does not exist for John, since he is a human, and will therefore raise an error
-#John.identify_ape()
+# The method identify_ape() does not exist for John, since he is a human, and will therefore raise an error
+# John.identify_ape()
 
 print("\n")
 
 print(Julius.info())
 Julius.identify_mammal()
 Julius.identify_primate()
-#The method identify_human() does not exist for Julius, since he is an ape, and will therefore raise an error
-#Julius.identify_human()
+# The method identify_human() does not exist for Julius, since he is an ape, and will therefore raise an error
+# Julius.identify_human()
 Julius.identify_ape()
 
 print("\n")

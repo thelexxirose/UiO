@@ -1,5 +1,6 @@
 import matplotlib.pyplot as plt
 
+
 class Euler:
     def __init__(self, x, y, y_prime):
         self.x = x
@@ -16,7 +17,6 @@ class Euler:
         plt.plot(arr[0], arr[1], label=method)
         if return_arr:
             return arr
-
 
     def forward_euler(self, interval, steps):
         plot_arr = [
@@ -43,4 +43,3 @@ class Euler:
             plot_arr[0].append((i+1)*h)
 
         return plot_arr
-        

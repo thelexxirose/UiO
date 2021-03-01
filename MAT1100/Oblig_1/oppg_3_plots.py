@@ -1,5 +1,3 @@
-import matplotlib.pyplot as plt
-import math
 import cmath
 
 Z_west = (0, 0)
@@ -20,4 +18,4 @@ print(rot_ext)
 
 #plt.plot([Z_west[0], Z_east[0], W_west.real, W_east.real], [Z_west[1], Z_east[1], W_west.imag, W_east.imag], 'ro')
 
-#plt.show()
+# plt.show()

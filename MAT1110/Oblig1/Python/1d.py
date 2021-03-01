@@ -1,4 +1,4 @@
-import numpy as np 
+import numpy as np
 import matplotlib.pyplot as plt
 
 # Used a and b values from the task
@@ -9,7 +9,11 @@ b = 3
 t = np.linspace(-b, b, 1001)
 
 # Defined r(t) as a lambda function that returns a tuple
-r = lambda t: (a*np.arcsinh(t/a), np.sqrt(a**2 + t**2))
+
+
+def r(t):
+    return (a*np.arcsinh(t/a), np.sqrt(a**2 + t**2))
+
 
 # plot r(t)
 plt.plot(r(t)[0], r(t)[1])

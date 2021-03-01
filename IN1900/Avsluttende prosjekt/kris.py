@@ -1,5 +1,6 @@
 import numpy as np
 
+
 def __call__(self, u, t):
     n = len(self.region)
     SEIR_list = [u[i:i+6] for i in range(0, len(u), 6)]
@@ -18,11 +19,12 @@ def __call__(self, u, t):
             ex = np.exp(-distance)
             sum1 += (Ia_other/pop_other)*ex
             sum2 += (E2_other/pop_other)*ex
-        dS = -self.beta(t)*S*I/self.region[i].population-self.r_ia*self.beta(t)*S*sum1-self.r_e2*self.beta(t)*S*sum2
+        dS = -self.beta(t)*S*I/self.region[i].population-self.r_ia * \
+            self.beta(t)*S*sum1-self.r_e2*self.beta(t)*S*sum2
         dE1 = -dS-E1*self.region[i].lmbda
         dE2 = self.lmbda_1*(1-self.p_a)*E1 - self.lmbda_2*E2
-        dI  = self.lmbda_2*E2 - self.mu*I
+        dI = self.lmbda_2*E2 - self.mu*I
         dIa = self.lmbda_1*self.p_a*E1 - self.mu*Ia
-        dR  = self.mu*(I + Ia)
+        dR = self.mu*(I + Ia)
         derivative += [dS, dE1, dE2, dI, dIa, dR]
     return derivative

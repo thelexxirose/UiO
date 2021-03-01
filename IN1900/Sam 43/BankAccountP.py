@@ -19,10 +19,13 @@ class BankAccountP:
         account.deposit(amount)
 
     def print_info(self):
-        first = self._first_name; last = self._last_name
-        number = self._number; bal = self._balance
+        first = self._first_name
+        last = self._last_name
+        number = self._number
+        bal = self._balance
         s = f'{first} {last}, {number}, balance: {bal}'
         print(s)
+
 
 def test_BankAccountP_class():
     a1 = BankAccountP("Cory", "Balaton", 1654387469, 10000)
@@ -54,10 +57,14 @@ def test_BankAccountP_class():
     calculated_2 = a2.get_balance()
     expected_2 = 11000
 
-    assert abs(calculated_1 - expected_1) < e and abs(calculated_2 - expected_2) < e
+    assert abs(calculated_1 - expected_1) < e \
+        and abs(calculated_2 - expected_2) < e
+
 
 test_BankAccountP_class()
 
 '''
-(base) corybalaton@Corys-MacBook-Pro Sam 43 % /Users/corybalaton/opt/anaconda3/bin/python "/Users/corybalaton/Documents/UiO/IN1900/Sam 43/BankAccountP.py"
+(base) corybalaton@Corys-MacBook-Pro Sam 43 %
+/Users/corybalaton/opt/anaconda3/bin/python
+"/Users/corybalaton/Documents/UiO/IN1900/Sam 43/BankAccountP.py"
 '''

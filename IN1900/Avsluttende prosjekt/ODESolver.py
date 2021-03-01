@@ -1,4 +1,7 @@
+import os
+import sys
 import numpy as np
+
 
 class ODESolver:
     """
@@ -12,6 +15,7 @@ class ODESolver:
     k: step number of the most recently computed solution
     f: callable object implementing f(u, t)
     """
+
     def __init__(self, f):
         if not callable(f):
             raise TypeError('f is %s, not a function' % type(f))
@@ -27,7 +31,7 @@ class ODESolver:
         raise NotImplementedError
 
     def set_initial_condition(self, U0):
-        if isinstance(U0, (float,int)):  # scalar ODE
+        if isinstance(U0, (float, int)):  # scalar ODE
             self.neq = 1
             U0 = float(U0)
         else:                            # system of ODEs
@@ -39,9 +43,11 @@ class ODESolver:
         try:
             f0 = self.f(self.U0, 0)
         except IndexError:
-            raise IndexError('Index of u out of bounds in f(u,t) func. Legal indices are %s' % (str(range(self.neq))))
+            raise IndexError(
+                'Index of u out of bounds in f(u,t) func. Legal indices are %s' % (str(range(self.neq))))
         if f0.size != self.neq:
-            raise ValueError('f(u,t) returns %d components, while u has %d components' % (f0.size, self.neq))
+            raise ValueError('f(u,t) returns %d components, while u has %d components' %
+                             (f0.size, self.neq))
 
     def solve(self, time_points, terminate=None):
         """
@@ -52,19 +58,20 @@ class ODESolver:
         function which always returns False is used.
         """
         if terminate is None:
-            terminate = lambda u, t, step_no: False
+            def terminate(u, t, step_no): return False
 
-        if isinstance(time_points, (float,int)):
+        if isinstance(time_points, (float, int)):
             raise TypeError('solve: time_points is not a sequence')
         self.t = np.asarray(time_points)
         if self.t.size <= 1:
-            raise ValueError('ODESolver.solve requires time_points array with at least 2 time points')
+            raise ValueError(
+                'ODESolver.solve requires time_points array with at least 2 time points')
 
         n = self.t.size
         if self.neq == 1:  # scalar ODEs
             self.u = np.zeros(n)
         else:              # systems of ODEs
-            self.u = np.zeros((n,self.neq))
+            self.u = np.zeros((n, self.neq))
 
         # Assume that self.t[0] corresponds to self.U0
         self.u[0] = self.U0
@@ -85,6 +92,7 @@ class ForwardEuler(ODESolver):
         u_new = u[k] + dt*f(u[k], t[k])
         return u_new
 
+
 class RungeKutta4(ODESolver):
     def advance(self):
         u, f, k, t = self.u, self.f, self.k, self.t
@@ -97,15 +105,16 @@ class RungeKutta4(ODESolver):
         u_new = u[k] + (1/6.0)*(K1 + 2*K2 + 2*K3 + K4)
         return u_new
 
-import sys, os
 
 class BackwardEuler(ODESolver):
     """Backward Euler solver for scalar ODEs."""
+
     def __init__(self, f):
         ODESolver.__init__(self, f)
         # Make a sample call to check that f is a scalar function:
         try:
-            u = np.array([1]); t = 1
+            u = np.array([1])
+            t = 1
             value = f(u, t)
         except IndexError:  # index out of bounds for u
             raise ValueError('f(u,t) must return float/int')
@@ -121,7 +130,7 @@ Could not import module "Newton". Place Newton.py in this directory
 ''' % (os.path.dirname(os.path.abspath(__file__))))
 
     # Alternative implementation of F:
-    #def F(self, w):
+    # def F(self, w):
     #    return w - self.dt*self.f(w, self.t[-1]) - self.u[self.k]
 
     def advance(self):
@@ -138,7 +147,7 @@ Could not import module "Newton". Place Newton.py in this directory
             self.Newton_iter = []
         self.Newton_iter.append(n)
         if n >= 30:
-            print("Newton's failed to converge at t=%g "\
+            print("Newton's failed to converge at t=%g "
                   "(%d iterations)" % (t[k+1], n))
         return u_new
 
@@ -156,8 +165,10 @@ class Derivative:
 registered_solver_classes = [
     ForwardEuler, RungeKutta4, BackwardEuler]
 
+
 def test_exact_numerical_solution():
-    a = 0.2; b = 3
+    a = 0.2
+    b = 3
 
     def f(u, t):
         return a + (u - u_exact(t))**5
@@ -180,6 +191,7 @@ def test_exact_numerical_solution():
         msg = '%s failed with max_error=%g' % \
               (solver.__class__.__name__, max_error)
         assert max_error < tol, msg
+
 
 if __name__ == '__main__':
     test_exact_numerical_solution()

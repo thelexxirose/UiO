@@ -1,4 +1,3 @@
-import numpy as np 
 import matplotlib.pyplot as plt
 from streamfun import streamfun
 import os

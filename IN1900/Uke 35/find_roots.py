@@ -1,5 +1,6 @@
 from math import pi
 
+
 def find_roots(a, b, c):
     eval_sroot = (b**2 - (4*a*c))**(1/2)
 
@@ -9,6 +10,7 @@ def find_roots(a, b, c):
     }
 
     return roots
+
 
 eval_roots = find_roots(81*pi, 1800, -6165)
 

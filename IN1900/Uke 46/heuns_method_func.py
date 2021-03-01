@@ -1,6 +1,7 @@
 import numpy as np
 import matplotlib.pyplot as plt
 
+
 def heuns_method(f, U0, T, N):
     t = np.zeros(N+1)
     u = np.zeros(N+1)
@@ -17,6 +18,7 @@ def heuns_method(f, U0, T, N):
 
     return u, t
 
+
 def test_heuns_against_hand_calculations():
     u_arr, t_arr = heuns_method(lambda x, t: 1/x, 1, 4, 8)
     a_4 = 3
@@ -25,6 +27,7 @@ def test_heuns_against_hand_calculations():
 
     print(f"equation: x' = t/x, where x(0) = 1")
     print(f"x(4) should be {a_4}. x(4) is {u_arr[8]}. error = {e_4}")
+
 
 test_heuns_against_hand_calculations()
 
@@ -36,13 +39,12 @@ for i in steps:
     plt.plot(t_arr, u_arr, label=f"steps = {i}")
 
 
-
 t = np.linspace(0, 4, 101)
-x = lambda t: np.sqrt(2*t + 1)
+def x(t): return np.sqrt(2*t + 1)
+
 
 plt.plot(t, x(t), label="analytical")
 
 plt.legend()
 plt.savefig("heuns_method_func.png")
 plt.show()
-

@@ -4,6 +4,7 @@ def binomial_coefficient(n, i):
         p *= (n - j + 1)/j
     return p
 
+
 for n in range(1, 2001):
     find = False
     for i in range(1, n+1):
