@@ -11,3 +11,5 @@ install:
 # command to run tests
 script:
   - pytest
+notifications:
+  slack: mami-6tv7447:jMJtmp7nZGBuF9PtOcdaLpIN
