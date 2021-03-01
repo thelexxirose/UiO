@@ -1,5 +1,6 @@
 import matplotlib.pyplot as plt
 
+
 class Distance:
     def __init__(self, x_arr, y_arr):
         self.x_arr = x_arr
@@ -19,5 +20,4 @@ class Distance:
         plt.ylabel("distance(m)")
         plt.title("Distance")
         plt.savefig(img_name, facecolor=fig.get_facecolor(), edgecolor='none')
-        #plt.show()
-        
+        # plt.show()

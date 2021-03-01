@@ -1,7 +1,9 @@
 import numpy as np
 
+
 def func(x):
     return np.log(x)
+
 
 x = np.linspace(1, 10, 101)
 y = np.vectorize(func)

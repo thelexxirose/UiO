@@ -1,15 +1,15 @@
 elements_10 = {
-    1: "-", 
-    2: "Helium", 
+    1: "-",
+    2: "Helium",
     3: "Lithium",
-    4: "Beryllium", 
-    5: "Boron", 
+    4: "Beryllium",
+    5: "Boron",
     6: "Carbon",
-    7: "Nitrogen", 
+    7: "Nitrogen",
     8: "-",
-    9: "Fluorine", 
+    9: "Fluorine",
     10: "Neon"
-    }
+}
 
 # a)
 

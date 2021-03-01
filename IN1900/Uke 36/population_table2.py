@@ -1,35 +1,43 @@
 import math as m
 
+
 def N_of_t(B, k, t, N_0):
-    #Calculates C given N(0)
+    # Calculates C given N(0)
     C = B/N_0 - 1
     #print("C is: " + str(C))
-    #Returns N(t)
+    # Returns N(t)
     return (B/(1 + C*(m.exp(-k*t))))
 
-#Create the structure of the lists
+
+# Create the structure of the lists
 tN1 = [
     [],
     []
 ]
 tN2 = []
 
-#Function for tN1 to generate data
+# Function for tN1 to generate data
+
+
 def lists1(B, k, N_0, n):
     for i in range(0, 49, n + 1):
         tN1[0].append(i)
         tN1[1].append(N_of_t(50000, 0.2, i, 5000))
 
+
 lists1(50000, 0.2, 5000, 12)
 
-#Function for tN2 to generate data
+# Function for tN2 to generate data
+
+
 def lists2(B, k, N_0, n):
     for i in range(0, 49, n + 1):
         tN2.append([i, N_of_t(50000, 0.2, i, 5000)])
 
+
 lists2(50000, 0.2, 5000, 12)
 
-#Formatting of the tables
+# Formatting of the tables
 print("|======METHOD 1======|")
 
 
@@ -44,7 +52,6 @@ for idx, i in enumerate(tN2):
     print(f'|  t: {i[0]:2d},  N: {int(i[1]):5d}  |')
 
 print("|====================|")
-
 
 
 '''

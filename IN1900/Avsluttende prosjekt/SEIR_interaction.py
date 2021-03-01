@@ -2,6 +2,8 @@ from SEIR import *
 import numpy as np
 
 # Class that is basically like the Region class, except that it takes in a latitude and longitude
+
+
 class RegionInteraction(Region):
     # Init method
     def __init__(self, name, S_0, E2_0, phi, lmbda):
@@ -13,7 +15,8 @@ class RegionInteraction(Region):
     # Returns the distance expressed as 10^5m
     def distance(self, other):
         R_earth = 64
-        t = np.sin(self.phi)*np.sin(other.phi) + np.cos(self.phi)*np.cos(other.phi)*np.cos(abs(self.lmbda - other.lmbda))
+        t = np.sin(self.phi)*np.sin(other.phi) + np.cos(self.phi) * \
+            np.cos(other.phi)*np.cos(abs(self.lmbda - other.lmbda))
         if t <= 0:
             t = 0
         elif t >= 1:
@@ -21,8 +24,10 @@ class RegionInteraction(Region):
         return R_earth*np.arccos(t)
 
 # Class that is the same as ProblemSeir, only that region is now a list of RegionInteraction instances
+
+
 class ProblemInteraction(ProblemSEIR):
-    def __init__(self, region, area_name, beta, r_ia = 0.1, r_e2=1.25,lmbda_1=0.33, lmbda_2=0.5, p_a=0.4, mu=0.2):
+    def __init__(self, region, area_name, beta, r_ia=0.1, r_e2=1.25, lmbda_1=0.33, lmbda_2=0.5, p_a=0.4, mu=0.2):
         super().__init__(region, beta, r_ia, r_e2, lmbda_1, lmbda_2, p_a, mu)
         self.area_name = area_name
         self.u = []
@@ -59,12 +64,13 @@ class ProblemInteraction(ProblemSEIR):
                 ex = np.exp(-distance)
                 sum1 += (Ia_other/pop_other)*ex
                 sum2 += (E2_other/pop_other)*ex
-            dS = -1*self.beta*S*I/self.region[i].population-self.r_ia*self.beta*S*sum1-self.r_e2*self.beta*S*sum2
+            dS = -1*self.beta*S*I/self.region[i].population - \
+                self.r_ia*self.beta*S*sum1-self.r_e2*self.beta*S*sum2
             dE1 = -dS-E1*self.region[i].lmbda
             dE2 = self.lmbda_1*(1-self.p_a)*E1 - self.lmbda_2*E2
-            dI  = self.lmbda_2*E2 - self.mu*I
+            dI = self.lmbda_2*E2 - self.mu*I
             dIa = self.lmbda_1*self.p_a*E1 - self.mu*Ia
-            dR  = self.mu*(I + Ia)
+            dR = self.mu*(I + Ia)
             derivative += [dS, dE1, dE2, dI, dIa, dR]
         return derivative
 
@@ -99,34 +105,32 @@ class ProblemInteraction(ProblemSEIR):
         plt.xlabel('Time(days)')
         plt.ylabel('Population')
         plt.title(self.area_name)
-        vals = [[0, 'Susceptible'],[1, "Exposed 1"], [2, "Exposed 2"], [3, 'Infectious 1'],[4, 'Infectious 2'],[5, 'Removed']]
+        vals = [[0, 'Susceptible'], [1, "Exposed 1"], [2, "Exposed 2"],
+                [3, 'Infectious 1'], [4, 'Infectious 2'], [5, 'Removed']]
         for j in vals:
             plt.plot(self.t, [self.u[i][j[0]] for i in range(len(self.u))], label=j[1])
-                
 
-        
-    
 
 if __name__ == "__main__":
-    innlandet = RegionInteraction("Innlandet",S_0=371385, E2_0=0, phi=60.7945,lmbda=11.0680)
-    oslo = RegionInteraction("Oslo",S_0=693494,E2_0=100, phi=59.9,lmbda=10.8)
+    innlandet = RegionInteraction("Innlandet", S_0=371385, E2_0=0, phi=60.7945, lmbda=11.0680)
+    oslo = RegionInteraction("Oslo", S_0=693494, E2_0=100, phi=59.9, lmbda=10.8)
     print(oslo.distance(innlandet))
 
     s = ProblemInteraction([innlandet, oslo], "s", 0.5)
     print(s.region)
     s.set_initial_condition()
-    
+
     print(s.initial_condition)
     print(s.get_population())
 
-    problem = ProblemInteraction([oslo,innlandet],"Norway_east", beta=0.5)
+    problem = ProblemInteraction([oslo, innlandet], "Norway_east", beta=0.5)
     print(problem.get_population())
     problem.set_initial_condition()
-    print(problem.initial_condition) #non-nested list of length 12
+    print(problem.initial_condition)  # non-nested list of length 12
     u = problem.initial_condition
-    print(problem(u,0)) #list of length 12. Check that values make sense
+    print(problem(u, 0))  # list of length 12. Check that values make sense
 
-    solver = SolverSEIR(problem,T=100,dt=1.0)
+    solver = SolverSEIR(problem, T=100, dt=1.0)
     solver.solve()
     problem.plot()
     plt.legend()

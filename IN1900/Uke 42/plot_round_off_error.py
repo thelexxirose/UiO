@@ -2,6 +2,7 @@ import numpy as np
 import matplotlib.pyplot as plt
 from scipy.interpolate import make_interp_spline, BSpline
 
+
 def arr(filename):
     delta_x = []
     abs_err = []
@@ -14,6 +15,7 @@ def arr(filename):
             n.append(float(data[5].split("=")[1].strip()))
 
     return delta_x, abs_err, n
+
 
 delta_x, abs_err, n = np.array(arr("approx_derivative_sine.txt"))
 

@@ -1,6 +1,7 @@
 import numpy as np
 import matplotlib.pyplot as plt
 
+
 def oscillation(t, A, k, gamma, m):
     return -((A * np.exp(-gamma*t)) * np.cos(np.sqrt((k/m)*t)))
 
@@ -13,8 +14,10 @@ for i in range(len(t_array_1)):
     t_array_1[i] = interval[0] + ((i*(interval[1]-1)) * (1/(len(t_array_1)-1)))
     y_array_1[i] = oscillation(t_array_1[i], 0.3, 4, 0.15, 9)
 
+
 def func(t):
     return oscillation(t, 0.3, 4, 0.15, 9)
+
 
 t_array_2 = np.linspace(0, 25, 101)
 y_array_2 = np.vectorize(func)

@@ -3,14 +3,14 @@ def create_dict(filename):
     with open(filename, "r") as f:
         l = {}
         for idx, line in enumerate(f):
-            l.update({idx:line})
+            l.update({idx: line})
 
     for i in range(1, len(l)):
         line = l[i].rstrip().replace(",", "").split(";")
         for j in line:
             el = j.split("-")
             res.update({el[0].strip().upper(): float(el[1].strip())})
-    
+
     return res
 
 

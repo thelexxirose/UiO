@@ -2,13 +2,14 @@
 
 from math import sin, cos, pi
 
+
 def f(x):
-	return sin(x)
+    return sin(x)
+
 
 def df_approx(f, x, delta_x):
-	return (f(x+delta_x)-f(x))/delta_x
-    #return (f(x+delta_x)-f(x-delta_x))/(2*delta_x)
-
+    return (f(x+delta_x)-f(x))/delta_x
+# return (f(x+delta_x)-f(x-delta_x))/(2*delta_x)
 
 
 x = pi/3

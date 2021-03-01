@@ -1,14 +1,17 @@
 import math as m
 
+
 def N_of_t(B, k, t, N_0):
-    #Calculates C given N(0)
+    # Calculates C given N(0)
     C = B/N_0 - 1
     #print("C is: " + str(C))
-    #Returns N(t)
+    # Returns N(t)
     return (B/(1 + C*(m.exp(-k*t))))
+
 
 N = []
 t = []
+
 
 def lists(B, k, N_0, n):
     for i in range(0, 49, n + 1):

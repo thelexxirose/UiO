@@ -1,12 +1,14 @@
-#g/mol
+# g/mol
 M_c = 12.011
 M_h = 1.0079
+
 
 def alkane_mass(n):
     m = 2*n + 2
     H_total_mass = M_h*m
     C_total_mass = M_c*n
     return f"M(C{n}H{m:2d}) = {(H_total_mass + C_total_mass):3.3f} g/mol)"
+
 
 for i in range(2, 10):
     print(alkane_mass(i))

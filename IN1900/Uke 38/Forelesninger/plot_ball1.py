@@ -10,7 +10,7 @@ t = np.linspace(0, t_stop, 100)
 
 y = v0*t - 0.5*g*t**2
 
-plt.plot(t,y)
+plt.plot(t, y)
 plt.xlabel('time (s)')
 plt.ylabel('height (m)')
 plt.title('Ball in vertical motion')

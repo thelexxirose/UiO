@@ -1,13 +1,15 @@
-import numpy as np 
+import numpy as np
 import matplotlib.pyplot as plt
 import pandas as pd
 
+
 def Fx_px():
     # Read and store the columns of the file
-    file = pd.read_csv("~/Documents/UiO/STK1100/Oblig1/Python/dodssannsynlighet-felles.txt", sep="\t")
+    file = pd.read_csv(
+        "~/Documents/UiO/STK1100/Oblig1/Python/dodssannsynlighet-felles.txt", sep="\t")
 
     # Set each column as a vector
-    age = file["ald"].values
+    file["ald"].values
     death = file["dod"].values
 
     # Defininf q byconverting death from per mille to decimal

@@ -1,7 +1,8 @@
-#Function that calculates interest depending on parameters P, r, and n
+# Function that calculates interest depending on parameters P, r, and n
 def interest_rate(P, r, n):
     A = P*(1 + r/100)**n
     return A
+
 
 print(interest_rate(1000, 5, 3))
 

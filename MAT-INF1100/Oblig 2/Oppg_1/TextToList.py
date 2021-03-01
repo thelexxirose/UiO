@@ -1,6 +1,7 @@
 import matplotlib.pyplot as plt
 import numpy as np
 
+
 class TextToList:
     def __init__(self, textfile):
         self.textfile = textfile

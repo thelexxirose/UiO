@@ -1,5 +1,6 @@
 import math
 
+
 def for_form(n, a_1, a_0):
     s = 0
     for i in range(n+1):
@@ -10,6 +11,7 @@ def for_form(n, a_1, a_0):
             a_0 = a_1
             a_1 = s
     return s
+
 
 print("Initial conditions: a_0 = 1, a_1 = 2 - sqrt(5) \n")
 

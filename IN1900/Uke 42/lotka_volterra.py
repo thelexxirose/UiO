@@ -7,7 +7,7 @@ R = np.zeros(500)
 R[0] = 100
 F[0] = 20
 
-for i in range(1,500):
+for i in range(1, 500):
     R[i] = R[i-1] + 0.04*R[i-1] - 0.005*R[i-1]*F[i-1]
     F[i] = F[i-1] + 0.2*0.005*R[i-1]*F[i-1] - 0.1*F[i-1]
 

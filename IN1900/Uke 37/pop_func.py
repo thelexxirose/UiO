@@ -1,7 +1,8 @@
 import math as m
 
+
 def N_of_t(B, k, t, C):
-    #Returns N(t)
+    # Returns N(t)
     return (B/(1 + C*m.e**(-(k*t))))
 
 

@@ -1,9 +1,11 @@
 import numpy as np
-import matplotlib.pyplot as plt 
+import matplotlib.pyplot as plt
 
 t = np.linspace(0, 6*np.pi, 1001)
 
-r = lambda t: (t*np.cos(t), t*np.sin(t)) 
+
+def r(t): return (t*np.cos(t), t*np.sin(t))
+
 
 print(r(t))
 

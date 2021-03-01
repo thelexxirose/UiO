@@ -1,6 +1,8 @@
 import math
 
-f = lambda x: math.exp(x**2)
+
+def f(x): return math.exp(x**2)
+
 
 s = 0
 

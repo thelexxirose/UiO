@@ -2,6 +2,7 @@ from math import sqrt
 
 running = True
 
+
 def quadratic_roots_input():
     a = float(input("input value a: "))
     b = float(input("input value b: "))
@@ -12,10 +13,12 @@ def quadratic_roots_input():
 
     return (f"The roots are: {x_1} and {x_2}")
 
+
 while running:
     print(quadratic_roots_input())
     t = False
-    run_again = input("Do you want to calculate the roots of another second degree polynomial? (y/n): ")
+    run_again = input(
+        "Do you want to calculate the roots of another second degree polynomial? (y/n): ")
     if (run_again == "n"):
         running = False
         t = True
@@ -28,8 +31,8 @@ while running:
             t = True
         elif (run_again == "y"):
             t = True
-            
-        
+
+
 '''
 (base) corybalaton@Corys-MacBook-Pro Oblig % /Users/corybalaton/opt/anaconda3/bin/python "/Users/corybalaton/Documents/UiO/IN1900/Uke 38/Oblig/quadratic_roots_input.py"
 input value a: 1

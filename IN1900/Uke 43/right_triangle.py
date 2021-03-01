@@ -1,6 +1,7 @@
 from math import sqrt
 import matplotlib.pyplot as plt
 
+
 class RightTriangle:
     def __init__(self, a, b):
         self.a = a
@@ -16,21 +17,23 @@ class RightTriangle:
         plt.plot([0, self.a], [self.b, 0])
         plt.savefig("right_triangle.png")
         plt.show()
-    
 
-triangle1 = RightTriangle(1,1)
-triangle2 = RightTriangle(3,4)
+
+triangle1 = RightTriangle(1, 1)
+triangle2 = RightTriangle(3, 4)
 
 print(triangle1.c)
 print(triangle2.c)
 
+
 def test_RightTriangle():
     success = False
     try:
-        triangle3 = RightTriangle(1,-1)
+        triangle3 = RightTriangle(1, -1)
     except ValueError:
         success = True
     assert success
+
 
 test_RightTriangle()
 

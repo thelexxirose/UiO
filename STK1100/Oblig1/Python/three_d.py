@@ -6,12 +6,15 @@ from three_c import Fx_px
 Fx, px = Fx_px()
 
 # Create funhction that calculate
-h = lambda X: (100000/1.03**32) * (1 - (1/1.03)**(X-31))/(1 - (1/1.03)) if X >= 32 else 0
+
+
+def h(X): return (100000/1.03**32) * (1 - (1/1.03)**(X-31))/(1 - (1/1.03)) if X >= 32 else 0
+
 
 # Create arange from 0 to including 71
 arr = np.arange(72)
 
-# Map through arr and apply the function h to every element. Should return 0 on the 32 first elements. 
+# Map through arr and apply the function h to every element. Should return 0 on the 32 first elements.
 hx = np.array(list(map(h, arr)))
 
 # Sum of the product of each element in hx and px

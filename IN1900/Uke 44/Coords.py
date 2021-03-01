@@ -1,5 +1,6 @@
 from math import sqrt
 
+
 class Coords:
     def __init__(self, x, y, z):
         self.coords = [x, y, z]
@@ -14,11 +15,13 @@ class Coords:
         return f"{sqrt(self.coords[0]**2 + self.coords[1]**2 + self.coords[2]**2):.2f}"
 
     def __add__(self, other):
-        addition = [self.coords[0] + other.coords[0], self.coords[1] + other.coords[1], self.coords[2] + other.coords[2]]
+        addition = [self.coords[0] + other.coords[0], self.coords[1] +
+                    other.coords[1], self.coords[2] + other.coords[2]]
         return Coords(addition[0], addition[1], addition[2])
 
     def __sub__(self, other):
-        subtraction = [self.coords[0] - other.coords[0], self.coords[1] - other.coords[1], self.coords[2] - other.coords[2]]
+        subtraction = [self.coords[0] - other.coords[0], self.coords[1] -
+                       other.coords[1], self.coords[2] - other.coords[2]]
         return Coords(subtraction[0], subtraction[1], subtraction[2])
 
 
@@ -58,4 +61,3 @@ The coordinates further are at (2.31, 9.24, 12.70)
 The distance from far to close is 14.14
 The coordinates at the centre are (0.00, 0.00, 0.00)
 '''
-

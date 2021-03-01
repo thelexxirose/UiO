@@ -6,10 +6,12 @@ def read_person_data(filename):
             d.update({data[0]: {"Age": data[1].strip(), "Gender": data[2].strip()}})
     return d
 
+
 def write_person_data(data_dict, filename):
     with open(filename, "w") as f:
         for key in data_dict:
             f.write(f"{key}, {data_dict[key]['Age']}, {data_dict[key]['Gender']} \n")
+
 
 d = read_person_data("people_dict.txt")
 d.update({"Cory": {"Age": 20, "Gender": "Male"}})

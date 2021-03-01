@@ -16,6 +16,7 @@ class Person:
     def __str__(self):
         return f"name: {self.name}, age: {self.age}, gender: {self.gender}"
 
+
 p1 = Person("John", 55, "Male")
 
 print(p1)
