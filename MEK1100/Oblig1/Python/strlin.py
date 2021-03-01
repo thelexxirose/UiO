@@ -1,6 +1,7 @@
 import numpy as np 
 import matplotlib.pyplot as plt
 from streamfun import streamfun
+import os
 
 # Accessing an environment variable that points to the MEK1100 directory
 path = f"{os.getenv('MEK1100')}/Oblig1/images"
