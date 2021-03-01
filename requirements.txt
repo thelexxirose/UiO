@@ -4,3 +4,5 @@ scipy
 sympy
 pandas
 pytest
+pytest-pylint
+pytest-flake8
