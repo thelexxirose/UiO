@@ -3,6 +3,9 @@
 \usepackage{mathtools}
 \usepackage{amsthm}
 \usepackage{cancel}
+
+\usepackage{esint}
+
 \usepackage{graphicx}
 \graphicspath{ {../images/} }
 
@@ -121,6 +124,69 @@ Virvlingen blir lik:
                                  &= (-\cos(x) \cdot \cos(y) - cos(x) \cdot \cos(y)) \cdot \textbf{k} \\
                                  &= (-2 \cdot cos(x) \cdot \cos(y)) \cdot \textbf{k}
     \end{split}
+\end{equation}
+\\
+c) \\
+\begin{equation}
+    \textbf{F} = \textbf{v}
+\end{equation}
+Man kan først definere randa til kvadratet med $4$ parametere:
+\begin{equation}
+    \begin{split}
+        \textbf{r}_1(t) &= \left(\frac{\pi}{2}, t \right) \\
+        \textbf{r}_2(t) &= \left(-\frac{\pi}{2}, t \right) \\
+        \textbf{r}_3(t) &= \left(t, \frac{\pi}{2} \right) \\
+        \textbf{r}_4(t) &= \left(t, -\frac{\pi}{2} \right) \\
+    \end{split}
+\end{equation}
+Deretter tar man linjeintegralet til $\textbf{F}$ med hver parameter og adderer dem sammen: \\
+\begin{equation}
+    \begin{split}
+        \ointctrclockwise_C &= \int_{-\frac{\pi}{2}}^{\frac{\pi}{2}} \textbf{F}(\textbf{r}_1(t)) \cdot \textbf{r}_1'(t) \cdot j \; dt \\
+                        &+ \int_{-\frac{\pi}{2}}^{\frac{\pi}{2}} \textbf{F}(\textbf{r}_2(t)) \cdot \textbf{r}_2'(t) \cdot -j \; dt \\
+                        &+ \int_{-\frac{\pi}{2}}^{\frac{\pi}{2}} \textbf{F}(\textbf{r}_3(t)) \cdot \textbf{r}_3'(t) \cdot -i \; dt \\
+                        &+ \int_{-\frac{\pi}{2}}^{\frac{\pi}{2}} \textbf{F}(\textbf{r}_4(t)) \cdot \textbf{r}_4'(t) \cdot i \; dt \\
+    \end{split}
+\end{equation} \\
+\begin{equation}
+    \begin{split}
+        \int_{-\frac{\pi}{2}}^{\frac{\pi}{2}} \textbf{F}(\textbf{r}_1(t)) \cdot \textbf{r}_1'(t) \cdot j \; dt &= \int_{-\frac{\pi}{2}}^{\frac{\pi}{2}} (\cos\left(\frac{\pi}{2}\right)\sin(t) \cdot i - \sin\left(\frac{\pi}{2}\right)\cos(t) \cdot j) \cdot j \; dt \\
+        &= \int_{-\frac{\pi}{2}}^{\frac{\pi}{2}} (- \cos(t) \cdot j) \cdot j \; dt \\
+        &= \left[- \sin(t) \right]_{-\frac{\pi}{2}}^{\frac{\pi}{2}} \\
+        &= - 1 - 1 \\
+        &= -2
+    \end{split}
+\end{equation}
+\begin{equation}
+    \begin{split}
+        \int_{-\frac{\pi}{2}}^{\frac{\pi}{2}} \textbf{F}(\textbf{r}_2(t)) \cdot \textbf{r}_2'(t) \cdot (-j) \; dt &= \int_{-\frac{\pi}{2}}^{\frac{\pi}{2}} (\cos(-\frac{\pi}{2})\sin(t) \cdot i - \sin(-\frac{\pi}{2})\cos(t) \cdot j) \cdot (-j) \; dt \\
+        &= \int_{-\frac{\pi}{2}}^{\frac{\pi}{2}} (\cos(t) \cdot j) \cdot (-j) \; dt \\
+        &= \left[- \sin(t) \right]_{-\frac{\pi}{2}}^{\frac{\pi}{2}} \\
+        &= - 1 - 1 \\
+        &= -2
+    \end{split}
+\end{equation}
+\begin{equation}
+    \begin{split}
+        \int_{-\frac{\pi}{2}}^{\frac{\pi}{2}} \textbf{F}(\textbf{r}_3(t)) \cdot \textbf{r}_3'(t) \cdot (-i) \; dt &= \int_{-\frac{\pi}{2}}^{\frac{\pi}{2}} (\cos(t)\sin\left(\frac{\pi}{2}\right) \cdot i - \sin(t)\cos\left(\frac{\pi}{2}\right) \cdot j) \cdot (-i) \; dt \\
+        &= \int_{-\frac{\pi}{2}}^{\frac{\pi}{2}} (\cos(t) \cdot i) \cdot (-i) \; dt \\
+        &= \left[- \sin(t) \right]_{-\frac{\pi}{2}}^{\frac{\pi}{2}} \\
+        &= - 1 - 1 \\
+        &= -2
+    \end{split}
+\end{equation}
+\begin{equation}
+    \begin{split}
+        \int_{-\frac{\pi}{2}}^{\frac{\pi}{2}} \textbf{F}(\textbf{r}_4(t)) \cdot \textbf{r}_4'(t) \cdot i \; dt &= \int_{-\frac{\pi}{2}}^{\frac{\pi}{2}} (\cos(t)\sin\left(-\frac{\pi}{2}\right) \cdot i - \sin(t)\cos\left(-\frac{\pi}{2}\right) \cdot j) \cdot i \; dt \\
+        &= \int_{-\frac{\pi}{2}}^{\frac{\pi}{2}} (- \cos(t) \cdot i) \cdot i \; dt \\
+        &= \left[- \sin(t) \right]_{-\frac{\pi}{2}}^{\frac{\pi}{2}} \\
+        &= - 1 - 1 \\
+        &= -2
+    \end{split}
+\end{equation}
+Sirkulasjonen blir da:
+\begin{equation}
+    \ointctrclockwise_C = -2 + (-2) + (-2) + (2) = -8
 \end{equation}
 \\
 d) \\
