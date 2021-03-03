@@ -42,5 +42,4 @@ if __name__ == "__main__":
     plt.title("Task 2B")
     plt.xlabel("x-axis")
     plt.ylabel("y-axis")
-
     plt.savefig(f"{path}/two_b.png")

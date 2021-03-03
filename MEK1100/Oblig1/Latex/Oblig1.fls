@@ -122,6 +122,9 @@ INPUT /usr/share/texlive/texmf-dist/fonts/tfm/jknappen/ec/ecrm0800.tfm
 INPUT /usr/share/texlive/texmf-dist/fonts/tfm/jknappen/ec/ecbx0800.tfm
 INPUT /usr/share/texlive/texmf-dist/fonts/tfm/jknappen/ec/ecrm0600.tfm
 INPUT /usr/share/texlive/texmf-dist/fonts/tfm/jknappen/ec/ecbx0600.tfm
+INPUT /home/cory/Documents/UiO/MEK1100/Oblig1/Latex/../images/two_b_hand_drawn.jpeg
+INPUT ../images/two_b_hand_drawn.jpeg
+INPUT ../images/two_b_hand_drawn.jpeg
 INPUT /usr/share/texlive/texmf-dist/tex/latex/listings/lstlang1.sty
 INPUT /usr/share/texlive/texmf-dist/tex/latex/listings/lstlang1.sty
 INPUT /home/cory/Documents/UiO/MEK1100/Oblig1/Latex/../Python/two_b.py
@@ -135,6 +138,12 @@ INPUT /usr/share/texlive/texmf-dist/fonts/tfm/jknappen/ec/ecrm1000.tfm
 INPUT /home/cory/Documents/UiO/MEK1100/Oblig1/Latex/../images/two_b.png
 INPUT ../images/two_b.png
 INPUT ../images/two_b.png
+INPUT /home/cory/Documents/UiO/MEK1100/Oblig1/Latex/../Python/three_b.py
+INPUT /home/cory/Documents/UiO/MEK1100/Oblig1/Latex/../Python/three_b.py
+INPUT /home/cory/Documents/UiO/MEK1100/Oblig1/Latex/../Python/three_b.py
+INPUT /home/cory/Documents/UiO/MEK1100/Oblig1/Latex/../images/three_b.png
+INPUT ../images/three_b.png
+INPUT ../images/three_b.png
 INPUT /home/cory/Documents/UiO/MEK1100/Oblig1/Latex/../Python/strlin.py
 INPUT /home/cory/Documents/UiO/MEK1100/Oblig1/Latex/../Python/strlin.py
 INPUT /home/cory/Documents/UiO/MEK1100/Oblig1/Latex/../Python/strlin.py

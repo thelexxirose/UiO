@@ -49,6 +49,44 @@
 \maketitle 
 \newpage
 
+
+\section*{Oppgave 1}
+\begin{equation*}
+    \begin{split}
+        x(t) &= v_0 \cdot t \cdot \cos(\theta) \\
+        y(t) &= v_0 \cdot t \cdot \sin(\theta) - \frac{1}{2} \cdot g \cdot t^2 
+    \end{split}
+\end{equation*} \\
+a) \\
+For å finne $t_m$, så må vi finne nullpunktene til $y(t)$:
+\begin{equation}
+    \begin{split}
+                                                                  y(t) &= 0 \\
+        v_0 \cdot t \cdot \sin(\theta) - \frac{1}{2} \cdot g \cdot t^2 &= 0 \\
+        t \cdot (v_0 \cdot \sin(\theta) - \frac{1}{2} \cdot g \cdot t) &= 0 \\
+    \end{split}
+\end{equation}
+\begin{equation}
+    \begin{split}
+        t_0 = 0
+    \end{split}
+\end{equation}
+\begin{equation}
+    \begin{split}
+        v_0 \cdot \sin(\theta) - \frac{1}{2} \cdot g \cdot t_m &= 0 \\
+                                      v_0 \cdot \sin(\theta) &= \frac{1}{2} \cdot g \cdot t_m \\
+                                                         t_m &= \frac{2 \cdot v_0 \cdot \sin(\theta)}{g}
+    \end{split}
+\end{equation}
+\begin{equation}
+    \begin{split}
+        x_m &= x(t_m) \\
+            &= v_0 \cdot \frac{2 \cdot v_0 \cdot \sin(\theta)}{g} \cdot \cos(\theta) \\
+            &= \frac{2 \cdot v_0^2 \cdot \sin(\theta) \cdot \cos(\theta)}{g}
+    \end{split}
+\end{equation}
+
+\newpage
 \section*{Oppgave 2}
 
 \begin{equation}
@@ -66,8 +104,9 @@ For å finne strømningslinjene, så må vi sette opp likningen:
     \end{split}
 \end{equation}
 \\
-b) \\
-
+b) \\ \\
+\hspace*{-1.5cm}
+\includegraphics[scale=0.15]{two_b_hand_drawn}
 
 
 \newpage
@@ -126,6 +165,13 @@ Virvlingen blir lik:
     \end{split}
 \end{equation}
 \\
+b) \\
+Python kode: \\
+\lstinputlisting[language=Python]{../Python/three_b.py}
+Feltet som blir produsert: \\
+\hspace*{-1.5cm}
+\includegraphics[scale=0.8]{three_b}
+
 c) \\
 \begin{equation}
     \textbf{F} = \textbf{v}
