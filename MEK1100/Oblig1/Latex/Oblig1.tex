@@ -85,6 +85,50 @@ For å finne $t_m$, så må vi finne nullpunktene til $y(t)$:
             &= \frac{2 \cdot v_0^2 \cdot \sin(\theta) \cdot \cos(\theta)}{g}
     \end{split}
 \end{equation}
+\\
+b) \\
+Først så må man ha noen definisjoner:
+\begin{equation*}
+    T = t_m = \frac{2 \cdot v_0 \cdot \sin(\theta)}{g}
+\end{equation*}
+\begin{equation*}
+    H = x_m = \frac{2 \cdot v_0^2 \cdot \sin(\theta) \cdot \cos(\theta)}{g}
+\end{equation*}
+\begin{equation*}
+    V = \frac{H}{T} = \frac{\frac{2 \cdot v_0^2 \cdot \sin(\theta) \cdot \cos(\theta)}{g}}{\frac{2 \cdot v_0 \cdot \sin(\theta)}{g}} = v_0 \cdot \cos(\theta)
+\end{equation*}
+\begin{equation*}
+    G = \frac{V}{T} = \frac{v_0 \cdot \cos(\theta)}{\frac{2 \cdot v_0 \cdot \sin(\theta)}{g}} = \frac{g \cdot \cos(\theta)}{2 \cdot \sin(\theta)}
+\end{equation*}
+Med dette, så kan man sette inn $x^*$, $y^*$ og $t^*$ \\
+\begin{equation}
+    \begin{split}
+        x^* &= \frac{v_0 \cdot t \cdot \cos(\theta)}{H} \\
+            &= \frac{v_0 \cdot \frac{t}{T} \cdot \cos(\theta)}{\frac{H}{T}} \\
+            &= \frac{v_0 \cdot t^* \cdot \cos(\theta)}{V} \\
+            &= \frac{v_0 \cdot t^* \cdot \cos(\theta)}{v_0 \cdot \cos(\theta)} \\
+            &= t^* \\
+    \end{split}
+\end{equation}
+\begin{equation*}
+    \begin{split}
+        y^* &= \frac{v_0 \cdot t \cdot \sin(\theta) - \frac{1}{2} \cdot g \cdot t^2 }{H} \\
+            &= \frac{v_0 \cdot \frac{t}{T} \cdot \sin(\theta)}{\frac{H}{T}} - \frac{\frac{1}{2} \cdot g \cdot \frac{t^2}{T^2}}{\frac{H}{T^2}} \\
+            &= \frac{v_0 \cdot t^* \cdot \sin(\theta)}{V} - \frac{\frac{1}{2} \cdot g \cdot (t^*)^2}{G} \\
+            &= \frac{v_0 \cdot t^* \cdot \sin(\theta)}{v_0 \cdot \cos(\theta)} - \frac{\frac{1}{2} \cdot g \cdot (t^*)^2}{\frac{g \cdot \cos(\theta)}{2 \cdot \sin(\theta)}} \\
+            &= t^* \cdot \frac{\sin(\theta)}{\cos(\theta)} - (t^*)^2 \cdot \frac{\sin(\theta)}{\cos(\theta)} \\
+            &= t^* \cdot \tan(\theta) \cdot (1 - t^*)
+    \end{split}
+\end{equation*}
+Man trenger ikke å skalere for $\theta$ ettersom den ikke har noen dimensjoner.
+\newpage
+c) \\
+Kode: \\
+\lstinputlisting[language=Python]{../Python/one_c_revised.py}
+\newpage
+Grafen som koden produserer: \\
+\hspace*{-1.5cm}
+\includegraphics{one_c_revised.png}
 
 \newpage
 \section*{Oppgave 2}
@@ -158,8 +202,8 @@ Virvlingen blir lik:
 
 \begin{equation}
     \begin{split}
-        \nabla \times \textbf{v} &= (\frac{\partial v_y}{\partial x} - \frac{\partial v_x}{\partial y}) \cdot \textbf{k} \\
-                                 &= (\frac{\partial}{\partial x} -\sin(x) \cdot \cos(y) - \frac{\partial}{\partial y} \cos(x) \cdot \sin(y)) \cdot \textbf{k} \\
+        \nabla \times \textbf{v} &= \left(\frac{\partial v_y}{\partial x} - \frac{\partial v_x}{\partial y}\right) \cdot \textbf{k} \\
+                                 &= \left(\frac{\partial}{\partial x} -\sin(x) \cdot \cos(y) - \frac{\partial}{\partial y} \cos(x) \cdot \sin(y)\right) \cdot \textbf{k} \\
                                  &= (-\cos(x) \cdot \cos(y) - cos(x) \cdot \cos(y)) \cdot \textbf{k} \\
                                  &= (-2 \cdot cos(x) \cdot \cos(y)) \cdot \textbf{k}
     \end{split}
@@ -171,7 +215,7 @@ Python kode: \\
 Feltet som blir produsert: \\
 \hspace*{-1.5cm}
 \includegraphics[scale=0.8]{three_b}
-
+\newpage
 c) \\
 \begin{equation}
     \textbf{F} = \textbf{v}
@@ -234,15 +278,15 @@ Sirkulasjonen blir da:
 \begin{equation}
     \ointctrclockwise_C = -2 + (-2) + (-2) + (2) = -8
 \end{equation}
-\\
+\newpage
 d) \\
 Siden $\nabla \cdot \textbf{v} = 0$, så betyr det at feltet er konservativt og derfor finnes det en strømfunksjon for feltet. \\
 For å regne ut $\psi$, så må man først finne $\int \frac{\partial \psi}{\partial x}$ og $\int \frac{\partial \psi}{\partial y}$
 
 \begin{equation}
     \begin{split}
-        \int \frac{\partial \psi}{\partial y} &= \int v_x dy \\
-                                              &= \int \cos(x) \cdot \sin(y) dx \\
+        \int \frac{\partial \psi}{\partial y} &= \int v_x \; dy \\
+                                              &= \int \cos(x) \cdot \sin(y) \; dy \\
                                               &= \cos(x) \cdot \cos(y) + f(x)
     \end{split}
 \end{equation}
@@ -250,7 +294,7 @@ For å regne ut $\psi$, så må man først finne $\int \frac{\partial \psi}{\par
 \begin{equation}
     \begin{split}
         \int \frac{\partial \psi}{\partial x} &= \int v_y dx \\
-                                              &= \int -\sin(x) \cdot \cos(y) dx \\
+                                              &= \int -\sin(x) \cdot \cos(y) \; dx \\
                                               &= \cos(x) \cdot \cos(y) + g(y)
     \end{split}
 \end{equation}
