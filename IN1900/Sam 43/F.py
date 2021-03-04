@@ -9,12 +9,12 @@ class F:
     def __init__(self, n, m):
         self.n = n
         self.m = m
-    
+
     def __call__(self, x):
         return sin(self.n * x) * cos(self.m * x)
 
 
-u = F(2,4)
+u = F(2, 4)
 v = F(5, 7)
 
 x = np.linspace(0, 2*pi, 1001)

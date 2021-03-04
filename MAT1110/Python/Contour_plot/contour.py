@@ -1,7 +1,8 @@
 from matplotlib import pyplot as plt
-import numpy as np
 
-f = lambda x,y: [x**2, x*y, y**2]
+
+def f(x, y):
+    return [x**2, x*y, y**2]
 
 
 width_of_panel = 4

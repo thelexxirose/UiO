@@ -1,5 +1,6 @@
 import math
 
+
 def recursiveForm(n, current, previous):
     if n == 0:
         return previous
@@ -10,8 +11,10 @@ def recursiveForm(n, current, previous):
         newPrevious = current
         return recursiveForm(n-1, newCurrent, newPrevious)
 
+
 def analyticForm(n):
     return (2-math.sqrt(5))**n
+
 
 n = 100
 x0 = 1

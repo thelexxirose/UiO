@@ -8,6 +8,7 @@ def quadratic_roots_input(a, b, c):
 
     return (f"The roots are: {x_1} and {x_2}")
 
+
 print(quadratic_roots_input(int(sys.argv[1]), int(sys.argv[2]), int(sys.argv[3])))
 
 '''

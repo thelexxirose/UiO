@@ -3,6 +3,7 @@ from matplotlib.lines import Line2D
 import numpy as np
 import matplotlib.pyplot as plt
 
+
 class Diff:
     def __init__(self, f):
         self.f = f

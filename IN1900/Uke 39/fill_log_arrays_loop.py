@@ -13,7 +13,10 @@ print("\n\n\n")
 print(y)
 
 '''
-(base) corybalaton@Corys-MacBook-Pro Uke 39 % /Users/corybalaton/opt/anaconda3/bin/python "/Users/corybalaton/Documents/UiO/IN1900/Uke 39/fill_log_arrays_loop.py"
+(base) corybalaton@Corys-MacBook-Pro Uke 39 %
+/Users/corybalaton/opt/anaconda3/bin/python
+"/Users/corybalaton/Documents/UiO/IN1900/Uke 39/fill_log_arrays_loop.py"
+
 [ 1.    1.09  1.18  1.27  1.36  1.45  1.54  1.63  1.72  1.81  1.9   1.99
   2.08  2.17  2.26  2.35  2.44  2.53  2.62  2.71  2.8   2.89  2.98  3.07
   3.16  3.25  3.34  3.43  3.52  3.61  3.7   3.79  3.88  3.97  4.06  4.15

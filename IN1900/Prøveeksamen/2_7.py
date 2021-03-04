@@ -9,7 +9,8 @@ def min_max(a):
 
     return minimum, maximum
 
-mi, ma = min_max([4,8,6,9,5,3,4])
+
+mi, ma = min_max([4, 8, 6, 9, 5, 3, 4])
 
 print(mi)
 print(ma)

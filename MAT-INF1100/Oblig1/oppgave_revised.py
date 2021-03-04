@@ -1,5 +1,6 @@
 import math
 
+
 def recursiveForm(n, current, previous):
     if n == 0:
         return previous
@@ -11,14 +12,17 @@ def recursiveForm(n, current, previous):
         # print(f"n {n:<3}: newCurrent = {newCurrent}, newPrevious = {newPrevious}")
         return recursiveForm(n-1, newCurrent, newPrevious)
 
+
 def analyticForm(n):
     return (2-math.sqrt(5))**n
 
+
 def bruteForceForm(n, multiplier):
     product = 1
-    for i in range (0,n):
+    for i in range(0, n):
         product = product*multiplier
     return product
+
 
 n = 100
 x0 = 1
@@ -41,4 +45,3 @@ while(n >= 0):
     analytic = analyticForm(n)
     print(f"{n:<3}: {bruteForce:>65} <=> {analytic:>25}: delta = {(bruteForce - analytic):>25}")
     n = n-1
-
