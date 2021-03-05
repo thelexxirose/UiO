@@ -1,3 +1,24 @@
 [submodule "FYS-1210"]
 	path = FYS-1210
 	url = https://github.com/thelexxirose/FYS-1210.git
+[submodule "MEK1100"]
+	path = MEK1100
+	url = https://github.com/thelexxirose/MEK1100.git
+[submodule "STK1100"]
+	path = STK1100
+	url = https://github.com/thelexxirose/STK1100.git
+[submodule "MAT1100"]
+	path = MAT1100
+	url = https://github.com/thelexxirose/MAT1100.git
+[submodule "MAT1110"]
+	path = MAT1110
+	url = https://github.com/thelexxirose/MAT1110.git
+[submodule "MAT-INF1100"]
+	path = MAT-INF1100
+	url = https://github.com/thelexxirose/MAT-INF1100.git
+[submodule "IN1900"]
+	path = IN1900
+	url = https://github.com/thelexxirose/IN1900.git
+[submodule "FYS-MEK1110"]
+	path = FYS-MEK1110
+	url = https://github.com/thelexxirose/FYS-MEK1110.git
