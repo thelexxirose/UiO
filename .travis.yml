@@ -1,4 +1,9 @@
 language: python
+git:
+  submodules: false
+before_install:
+  - echo -e "machine github.com\n  login $GITHUB_USER\n  password $GITHUB_PASSWORD" >~/.netrc
+  - git submodule update --init --recursive
 python:
   - "3.6"      # current default Python on Travis CI
   - "3.7"
